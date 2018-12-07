@@ -11,9 +11,13 @@
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
 		D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */; };
+		E90CAFA0C0B875517BB653A0 /* Pods_UIKitMixinableDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821027930AA5EB863E347BD1 /* Pods_UIKitMixinableDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391564A0744FF85C765C5D6A /* Pods-UIKitMixinableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitMixinableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitMixinableDemo/Pods-UIKitMixinableDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6331D3108F5C543FB5C652DA /* Pods-UIKitMixinableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitMixinableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitMixinableDemo/Pods-UIKitMixinableDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		821027930AA5EB863E347BD1 /* Pods_UIKitMixinableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitMixinableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F7401C3BC9CE008CDDBA /* UIKitMixinableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitMixinableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90CAFA0C0B875517BB653A0 /* Pods_UIKitMixinableDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD76A27F2BA8551B6DFC9422 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6331D3108F5C543FB5C652DA /* Pods-UIKitMixinableDemo.debug.xcconfig */,
+				391564A0744FF85C765C5D6A /* Pods-UIKitMixinableDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C64E6CD7BBB31C4A4F40B051 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				821027930AA5EB863E347BD1 /* Pods_UIKitMixinableDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5C7F7371C3BC9CE008CDDBA = {
 			isa = PBXGroup;
 			children = (
 				D5C7F7421C3BC9CE008CDDBA /* UIKitMixinableDemo */,
 				D5C7F7411C3BC9CE008CDDBA /* Products */,
+				BD76A27F2BA8551B6DFC9422 /* Pods */,
+				C64E6CD7BBB31C4A4F40B051 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "UIKitMixinableDemo" */;
 			buildPhases = (
+				00A5030797297E16571333E0 /* [CP] Check Pods Manifest.lock */,
 				D5C7F73C1C3BC9CE008CDDBA /* Sources */,
 				D5C7F73D1C3BC9CE008CDDBA /* Frameworks */,
 				D5C7F73E1C3BC9CE008CDDBA /* Resources */,
+				30FEA49F78CE6F2F6CFFC68B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -117,6 +143,7 @@
 				TargetAttributes = {
 					D5C7F73F1C3BC9CE008CDDBA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4B7GH74X7C;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -150,6 +177,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00A5030797297E16571333E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIKitMixinableDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30FEA49F78CE6F2F6CFFC68B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UIKitMixinableDemo/Pods-UIKitMixinableDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DarkMagic/DarkMagic.framework",
+				"${BUILT_PRODUCTS_DIR}/UIKitMixinable/UIKitMixinable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkMagic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIKitMixinable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIKitMixinableDemo/Pods-UIKitMixinableDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5C7F73C1C3BC9CE008CDDBA /* Sources */ = {
@@ -277,8 +353,10 @@
 		};
 		D5C7F7531C3BC9CE008CDDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6331D3108F5C543FB5C652DA /* Pods-UIKitMixinableDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4B7GH74X7C;
 				INFOPLIST_FILE = UIKitMixinableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.appsaurus.UIKitMixinable.demo.UIKitMixinableDemo;
@@ -288,8 +366,10 @@
 		};
 		D5C7F7541C3BC9CE008CDDBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391564A0744FF85C765C5D6A /* Pods-UIKitMixinableDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4B7GH74X7C;
 				INFOPLIST_FILE = UIKitMixinableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.appsaurus.UIKitMixinable.demo.UIKitMixinableDemo;

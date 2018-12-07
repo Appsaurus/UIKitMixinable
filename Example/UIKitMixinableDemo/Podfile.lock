@@ -1,0 +1,26 @@
+PODS:
+  - DarkMagic (0.0.1)
+  - UIKitMixinable (0.0.1)
+
+DEPENDENCIES:
+  - DarkMagic (from `https://github.com/appsaurus/DarkMagic.git`)
+  - UIKitMixinable (from `../../`)
+
+EXTERNAL SOURCES:
+  DarkMagic:
+    :git: https://github.com/appsaurus/DarkMagic.git
+  UIKitMixinable:
+    :path: "../../"
+
+CHECKOUT OPTIONS:
+  DarkMagic:
+    :commit: 2f9737ee570a2aa5791788ee0d8f2e940ed4fb6b
+    :git: https://github.com/appsaurus/DarkMagic.git
+
+SPEC CHECKSUMS:
+  DarkMagic: 3bb176782b377087e1d4b4f33677a33b12d8807e
+  UIKitMixinable: e36e3118087e1968fb03a3d1000ad62683551101
+
+PODFILE CHECKSUM: db98b0bfd01ea983374598cc07b73c328f4010ca
+
+COCOAPODS: 1.5.3

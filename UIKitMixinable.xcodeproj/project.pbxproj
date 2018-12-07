@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D284B0F61F79024300D94AF3 /* macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B0F51F79024300D94AF3 /* macOS.swift */; };
+		22F1384EBEE48E22A93D404B /* Pods_UIKitMixinable_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB45EEAB7B3AAC20EF0B02 /* Pods_UIKitMixinable_iOS.framework */; };
 		D284B1051F79038B00D94AF3 /* UIKitMixinable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284B0FC1F79038B00D94AF3 /* UIKitMixinable.framework */; };
-		D284B1231F79041C00D94AF3 /* tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1221F79041C00D94AF3 /* tvOS.swift */; };
-		D284B1251F79042800D94AF3 /* watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1241F79042800D94AF3 /* watchOS.swift */; };
 		D284B1381F7906DB00D94AF3 /* Info-iOS-Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D284B12F1F7906DA00D94AF3 /* Info-iOS-Tests.plist */; };
 		D284B1391F7906DB00D94AF3 /* Info-tvOS-Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */; };
 		D284B13B1F7906DB00D94AF3 /* Info-macOS-Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D284B1331F7906DA00D94AF3 /* Info-macOS-Tests.plist */; };
@@ -20,13 +18,108 @@
 		D284B1461F7908B300D94AF3 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
 		D284B1471F7908B800D94AF3 /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1361F7906DA00D94AF3 /* iOSTests.swift */; };
 		D284B1481F7908BB00D94AF3 /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B12E1F7906DA00D94AF3 /* macOSTests.swift */; };
-		D284B1491F790CA200D94AF3 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
-		D284B14A1F790CA200D94AF3 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* UIKitMixinable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* UIKitMixinable.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* UIKitMixinable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* UIKitMixinable.framework */; };
-		D5C629831C3A892A007F7B7C /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629821C3A892A007F7B7C /* iOS.swift */; };
-		D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
-		D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
+		E453A72A21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
+		E453A72B21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
+		E453A72C21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
+		E453A72D21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
+		E453A72E21BB119B00B5F714 /* MixinableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */; };
+		E453A72F21BB119B00B5F714 /* MixinableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */; };
+		E453A73021BB119B00B5F714 /* MixinableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */; };
+		E453A73121BB119B00B5F714 /* MixinableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */; };
+		E453A73221BB119B00B5F714 /* MixinableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71121BB119A00B5F714 /* MixinableViewController.swift */; };
+		E453A73321BB119B00B5F714 /* MixinableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71121BB119A00B5F714 /* MixinableViewController.swift */; };
+		E453A73421BB119B00B5F714 /* MixinableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71121BB119A00B5F714 /* MixinableViewController.swift */; };
+		E453A73521BB119B00B5F714 /* MixinableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71121BB119A00B5F714 /* MixinableViewController.swift */; };
+		E453A73621BB119B00B5F714 /* MixinableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71221BB119A00B5F714 /* MixinableTableViewController.swift */; };
+		E453A73721BB119B00B5F714 /* MixinableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71221BB119A00B5F714 /* MixinableTableViewController.swift */; };
+		E453A73821BB119B00B5F714 /* MixinableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71221BB119A00B5F714 /* MixinableTableViewController.swift */; };
+		E453A73921BB119B00B5F714 /* MixinableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71221BB119A00B5F714 /* MixinableTableViewController.swift */; };
+		E453A73A21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71321BB119A00B5F714 /* MixinableCollectionViewController.swift */; };
+		E453A73B21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71321BB119A00B5F714 /* MixinableCollectionViewController.swift */; };
+		E453A73C21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71321BB119A00B5F714 /* MixinableCollectionViewController.swift */; };
+		E453A73D21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71321BB119A00B5F714 /* MixinableCollectionViewController.swift */; };
+		E453A73E21BB119B00B5F714 /* MixinablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71421BB119A00B5F714 /* MixinablePageViewController.swift */; };
+		E453A73F21BB119B00B5F714 /* MixinablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71421BB119A00B5F714 /* MixinablePageViewController.swift */; };
+		E453A74021BB119B00B5F714 /* MixinablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71421BB119A00B5F714 /* MixinablePageViewController.swift */; };
+		E453A74121BB119B00B5F714 /* MixinablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71421BB119A00B5F714 /* MixinablePageViewController.swift */; };
+		E453A74221BB119B00B5F714 /* MixinableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71621BB119A00B5F714 /* MixinableTextField.swift */; };
+		E453A74321BB119B00B5F714 /* MixinableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71621BB119A00B5F714 /* MixinableTextField.swift */; };
+		E453A74421BB119B00B5F714 /* MixinableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71621BB119A00B5F714 /* MixinableTextField.swift */; };
+		E453A74521BB119B00B5F714 /* MixinableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71621BB119A00B5F714 /* MixinableTextField.swift */; };
+		E453A74621BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71721BB119A00B5F714 /* MixinableCollectionViewCell.swift */; };
+		E453A74721BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71721BB119A00B5F714 /* MixinableCollectionViewCell.swift */; };
+		E453A74821BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71721BB119A00B5F714 /* MixinableCollectionViewCell.swift */; };
+		E453A74921BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71721BB119A00B5F714 /* MixinableCollectionViewCell.swift */; };
+		E453A74A21BB119B00B5F714 /* MixinableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71821BB119A00B5F714 /* MixinableImageView.swift */; };
+		E453A74B21BB119B00B5F714 /* MixinableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71821BB119A00B5F714 /* MixinableImageView.swift */; };
+		E453A74C21BB119B00B5F714 /* MixinableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71821BB119A00B5F714 /* MixinableImageView.swift */; };
+		E453A74D21BB119B00B5F714 /* MixinableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71821BB119A00B5F714 /* MixinableImageView.swift */; };
+		E453A74E21BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71921BB119A00B5F714 /* MixinableTableViewHeaderFooterView.swift */; };
+		E453A74F21BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71921BB119A00B5F714 /* MixinableTableViewHeaderFooterView.swift */; };
+		E453A75021BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71921BB119A00B5F714 /* MixinableTableViewHeaderFooterView.swift */; };
+		E453A75121BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71921BB119A00B5F714 /* MixinableTableViewHeaderFooterView.swift */; };
+		E453A75221BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71A21BB119A00B5F714 /* MixinableBarButtonItem.swift */; };
+		E453A75321BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71A21BB119A00B5F714 /* MixinableBarButtonItem.swift */; };
+		E453A75421BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71A21BB119A00B5F714 /* MixinableBarButtonItem.swift */; };
+		E453A75521BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71A21BB119A00B5F714 /* MixinableBarButtonItem.swift */; };
+		E453A75621BB119B00B5F714 /* MixinableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71B21BB119A00B5F714 /* MixinableScrollView.swift */; };
+		E453A75721BB119B00B5F714 /* MixinableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71B21BB119A00B5F714 /* MixinableScrollView.swift */; };
+		E453A75821BB119B00B5F714 /* MixinableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71B21BB119A00B5F714 /* MixinableScrollView.swift */; };
+		E453A75921BB119B00B5F714 /* MixinableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71B21BB119A00B5F714 /* MixinableScrollView.swift */; };
+		E453A75A21BB119B00B5F714 /* MixinableToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71C21BB119A00B5F714 /* MixinableToolbar.swift */; };
+		E453A75B21BB119B00B5F714 /* MixinableToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71C21BB119A00B5F714 /* MixinableToolbar.swift */; };
+		E453A75C21BB119B00B5F714 /* MixinableToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71C21BB119A00B5F714 /* MixinableToolbar.swift */; };
+		E453A75D21BB119B00B5F714 /* MixinableToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71C21BB119A00B5F714 /* MixinableToolbar.swift */; };
+		E453A75E21BB119B00B5F714 /* MixinableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71D21BB119A00B5F714 /* MixinableView.swift */; };
+		E453A75F21BB119B00B5F714 /* MixinableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71D21BB119A00B5F714 /* MixinableView.swift */; };
+		E453A76021BB119B00B5F714 /* MixinableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71D21BB119A00B5F714 /* MixinableView.swift */; };
+		E453A76121BB119B00B5F714 /* MixinableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71D21BB119A00B5F714 /* MixinableView.swift */; };
+		E453A76221BB119B00B5F714 /* MixinableSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */; };
+		E453A76321BB119B00B5F714 /* MixinableSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */; };
+		E453A76421BB119B00B5F714 /* MixinableSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */; };
+		E453A76521BB119B00B5F714 /* MixinableSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */; };
+		E453A76621BB119B00B5F714 /* MixinableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71F21BB119A00B5F714 /* MixinableButton.swift */; };
+		E453A76721BB119B00B5F714 /* MixinableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71F21BB119A00B5F714 /* MixinableButton.swift */; };
+		E453A76821BB119B00B5F714 /* MixinableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71F21BB119A00B5F714 /* MixinableButton.swift */; };
+		E453A76921BB119B00B5F714 /* MixinableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A71F21BB119A00B5F714 /* MixinableButton.swift */; };
+		E453A76A21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */; };
+		E453A76B21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */; };
+		E453A76C21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */; };
+		E453A76D21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */; };
+		E453A76E21BB119B00B5F714 /* DefaultMixins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72121BB119A00B5F714 /* DefaultMixins.swift */; };
+		E453A76F21BB119B00B5F714 /* DefaultMixins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72121BB119A00B5F714 /* DefaultMixins.swift */; };
+		E453A77021BB119B00B5F714 /* DefaultMixins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72121BB119A00B5F714 /* DefaultMixins.swift */; };
+		E453A77121BB119B00B5F714 /* DefaultMixins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72121BB119A00B5F714 /* DefaultMixins.swift */; };
+		E453A77221BB119B00B5F714 /* Mixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72221BB119B00B5F714 /* Mixin.swift */; };
+		E453A77321BB119B00B5F714 /* Mixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72221BB119B00B5F714 /* Mixin.swift */; };
+		E453A77421BB119B00B5F714 /* Mixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72221BB119B00B5F714 /* Mixin.swift */; };
+		E453A77521BB119B00B5F714 /* Mixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72221BB119B00B5F714 /* Mixin.swift */; };
+		E453A77621BB119B00B5F714 /* Mixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72421BB119B00B5F714 /* Mixinable.swift */; };
+		E453A77721BB119B00B5F714 /* Mixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72421BB119B00B5F714 /* Mixinable.swift */; };
+		E453A77821BB119B00B5F714 /* Mixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72421BB119B00B5F714 /* Mixinable.swift */; };
+		E453A77921BB119B00B5F714 /* Mixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72421BB119B00B5F714 /* Mixinable.swift */; };
+		E453A77A21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */; };
+		E453A77B21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */; };
+		E453A77C21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */; };
+		E453A77D21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */; };
+		E453A77E21BB119B00B5F714 /* InitializableMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72621BB119B00B5F714 /* InitializableMixinable.swift */; };
+		E453A77F21BB119B00B5F714 /* InitializableMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72621BB119B00B5F714 /* InitializableMixinable.swift */; };
+		E453A78021BB119B00B5F714 /* InitializableMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72621BB119B00B5F714 /* InitializableMixinable.swift */; };
+		E453A78121BB119B00B5F714 /* InitializableMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72621BB119B00B5F714 /* InitializableMixinable.swift */; };
+		E453A78221BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72721BB119B00B5F714 /* UINibLoadingMixinable.swift */; };
+		E453A78321BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72721BB119B00B5F714 /* UINibLoadingMixinable.swift */; };
+		E453A78421BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72721BB119B00B5F714 /* UINibLoadingMixinable.swift */; };
+		E453A78521BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72721BB119B00B5F714 /* UINibLoadingMixinable.swift */; };
+		E453A78621BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72821BB119B00B5F714 /* UIViewControllerMixinable.swift */; };
+		E453A78721BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72821BB119B00B5F714 /* UIViewControllerMixinable.swift */; };
+		E453A78821BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72821BB119B00B5F714 /* UIViewControllerMixinable.swift */; };
+		E453A78921BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72821BB119B00B5F714 /* UIViewControllerMixinable.swift */; };
+		E453A78A21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
+		E453A78B21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
+		E453A78C21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
+		E453A78D21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +147,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D284B0F51F79024300D94AF3 /* macOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOS.swift; sourceTree = "<group>"; };
+		5C9190A564C437EE3D78E235 /* Pods-UIKitMixinable-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitMixinable-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitMixinable-iOS/Pods-UIKitMixinable-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9E620363C545C92B3D75AADD /* Pods-UIKitMixinable-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitMixinable-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIKitMixinable-iOS/Pods-UIKitMixinable-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D284B0FC1F79038B00D94AF3 /* UIKitMixinable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitMixinable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D284B1041F79038B00D94AF3 /* UIKitMixinable-tvOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitMixinable-tvOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D284B1181F79039F00D94AF3 /* UIKitMixinable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitMixinable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D284B1221F79041C00D94AF3 /* tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOS.swift; sourceTree = "<group>"; };
-		D284B1241F79042800D94AF3 /* watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchOS.swift; sourceTree = "<group>"; };
 		D284B12E1F7906DA00D94AF3 /* macOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
 		D284B12F1F7906DA00D94AF3 /* Info-iOS-Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS-Tests.plist"; sourceTree = "<group>"; };
 		D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS-Tests.plist"; sourceTree = "<group>"; };
@@ -77,8 +169,40 @@
 		D5B2E8A91C3A780C00C0327D /* UIKitMixinable-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitMixinable-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* UIKitMixinable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitMixinable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629491C3A7FAA007F7B7C /* UIKitMixinable-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitMixinable-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629821C3A892A007F7B7C /* iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS.swift; sourceTree = "<group>"; };
-		D5C629861C3A89A8007F7B7C /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTabBarController.swift; sourceTree = "<group>"; };
+		E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableNavigationController.swift; sourceTree = "<group>"; };
+		E453A71121BB119A00B5F714 /* MixinableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableViewController.swift; sourceTree = "<group>"; };
+		E453A71221BB119A00B5F714 /* MixinableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTableViewController.swift; sourceTree = "<group>"; };
+		E453A71321BB119A00B5F714 /* MixinableCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableCollectionViewController.swift; sourceTree = "<group>"; };
+		E453A71421BB119A00B5F714 /* MixinablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinablePageViewController.swift; sourceTree = "<group>"; };
+		E453A71621BB119A00B5F714 /* MixinableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTextField.swift; sourceTree = "<group>"; };
+		E453A71721BB119A00B5F714 /* MixinableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableCollectionViewCell.swift; sourceTree = "<group>"; };
+		E453A71821BB119A00B5F714 /* MixinableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableImageView.swift; sourceTree = "<group>"; };
+		E453A71921BB119A00B5F714 /* MixinableTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		E453A71A21BB119A00B5F714 /* MixinableBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableBarButtonItem.swift; sourceTree = "<group>"; };
+		E453A71B21BB119A00B5F714 /* MixinableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableScrollView.swift; sourceTree = "<group>"; };
+		E453A71C21BB119A00B5F714 /* MixinableToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableToolbar.swift; sourceTree = "<group>"; };
+		E453A71D21BB119A00B5F714 /* MixinableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableView.swift; sourceTree = "<group>"; };
+		E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableSearchBar.swift; sourceTree = "<group>"; };
+		E453A71F21BB119A00B5F714 /* MixinableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableButton.swift; sourceTree = "<group>"; };
+		E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTableViewCell.swift; sourceTree = "<group>"; };
+		E453A72121BB119A00B5F714 /* DefaultMixins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultMixins.swift; sourceTree = "<group>"; };
+		E453A72221BB119B00B5F714 /* Mixin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mixin.swift; sourceTree = "<group>"; };
+		E453A72421BB119B00B5F714 /* Mixinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mixinable.swift; sourceTree = "<group>"; };
+		E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperviewMixinable.swift; sourceTree = "<group>"; };
+		E453A72621BB119B00B5F714 /* InitializableMixinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializableMixinable.swift; sourceTree = "<group>"; };
+		E453A72721BB119B00B5F714 /* UINibLoadingMixinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINibLoadingMixinable.swift; sourceTree = "<group>"; };
+		E453A72821BB119B00B5F714 /* UIViewControllerMixinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerMixinable.swift; sourceTree = "<group>"; };
+		E453A72921BB119B00B5F714 /* UIViewMixinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewMixinable.swift; sourceTree = "<group>"; };
+		E453A78E21BB11FB00B5F714 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E453A78F21BB11FB00B5F714 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		E453A79021BB11FB00B5F714 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E453A79121BB11FB00B5F714 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		E453A79221BB11FB00B5F714 /* UIKitMixinable.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIKitMixinable.podspec; sourceTree = "<group>"; };
+		E453A79321BB11FB00B5F714 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		E453A79421BB11FB00B5F714 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
+		E453A79521BB11FB00B5F714 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		EBBB45EEAB7B3AAC20EF0B02 /* Pods_UIKitMixinable_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitMixinable_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F1384EBEE48E22A93D404B /* Pods_UIKitMixinable_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +262,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79D05C20660E41992A308917 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB45EEAB7B3AAC20EF0B02 /* Pods_UIKitMixinable_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDD7AE510332C9F3F082CA2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C9190A564C437EE3D78E235 /* Pods-UIKitMixinable-iOS.debug.xcconfig */,
+				9E620363C545C92B3D75AADD /* Pods-UIKitMixinable-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D284B0F41F79024300D94AF3 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				D284B0F51F79024300D94AF3 /* macOS.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -148,7 +289,6 @@
 		D284B1201F79041300D94AF3 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				D284B1221F79041C00D94AF3 /* tvOS.swift */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -156,7 +296,6 @@
 		D284B1211F79041300D94AF3 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				D284B1241F79042800D94AF3 /* watchOS.swift */,
 			);
 			path = watchOS;
 			sourceTree = "<group>";
@@ -207,12 +346,22 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
+				E453A78F21BB11FB00B5F714 /* Cartfile */,
+				E453A79421BB11FB00B5F714 /* circle.yml */,
+				E453A79521BB11FB00B5F714 /* CONTRIBUTING.md */,
+				E453A79321BB11FB00B5F714 /* LICENSE.md */,
+				E453A79121BB11FB00B5F714 /* Package.swift */,
+				E453A78E21BB11FB00B5F714 /* Podfile */,
+				E453A79021BB11FB00B5F714 /* README.md */,
+				E453A79221BB11FB00B5F714 /* UIKitMixinable.podspec */,
 				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
 				D500FD121C3AAC8E00782D78 /* Playground-macOS.playground */,
 				D284B13F1F79081F00D94AF3 /* Info */,
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6298F1C3A8BDA007F7B7C /* UIKitMixinableTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
+				CDD7AE510332C9F3F082CA2B /* Pods */,
+				79D05C20660E41992A308917 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,7 +394,6 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629821C3A892A007F7B7C /* iOS.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -253,7 +401,10 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629861C3A89A8007F7B7C /* Shared.swift */,
+				E453A72121BB119A00B5F714 /* DefaultMixins.swift */,
+				E453A72221BB119B00B5F714 /* Mixin.swift */,
+				E453A72321BB119B00B5F714 /* Mixinable */,
+				E453A70C21BB119A00B5F714 /* Subclass */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -270,6 +421,67 @@
 				D284B1341F7906DA00D94AF3 /* tvOS */,
 			);
 			path = UIKitMixinableTests;
+			sourceTree = "<group>";
+		};
+		E453A70C21BB119A00B5F714 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				E453A70D21BB119A00B5F714 /* Shared */,
+			);
+			path = Subclass;
+			sourceTree = "<group>";
+		};
+		E453A70D21BB119A00B5F714 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E453A70E21BB119A00B5F714 /* ViewControllers */,
+				E453A71521BB119A00B5F714 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E453A70E21BB119A00B5F714 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */,
+				E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */,
+				E453A71121BB119A00B5F714 /* MixinableViewController.swift */,
+				E453A71221BB119A00B5F714 /* MixinableTableViewController.swift */,
+				E453A71321BB119A00B5F714 /* MixinableCollectionViewController.swift */,
+				E453A71421BB119A00B5F714 /* MixinablePageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E453A71521BB119A00B5F714 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E453A71621BB119A00B5F714 /* MixinableTextField.swift */,
+				E453A71721BB119A00B5F714 /* MixinableCollectionViewCell.swift */,
+				E453A71821BB119A00B5F714 /* MixinableImageView.swift */,
+				E453A71921BB119A00B5F714 /* MixinableTableViewHeaderFooterView.swift */,
+				E453A71A21BB119A00B5F714 /* MixinableBarButtonItem.swift */,
+				E453A71B21BB119A00B5F714 /* MixinableScrollView.swift */,
+				E453A71C21BB119A00B5F714 /* MixinableToolbar.swift */,
+				E453A71D21BB119A00B5F714 /* MixinableView.swift */,
+				E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */,
+				E453A71F21BB119A00B5F714 /* MixinableButton.swift */,
+				E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E453A72321BB119B00B5F714 /* Mixinable */ = {
+			isa = PBXGroup;
+			children = (
+				E453A72421BB119B00B5F714 /* Mixinable.swift */,
+				E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */,
+				E453A72621BB119B00B5F714 /* InitializableMixinable.swift */,
+				E453A72721BB119B00B5F714 /* UINibLoadingMixinable.swift */,
+				E453A72821BB119B00B5F714 /* UIViewControllerMixinable.swift */,
+				E453A72921BB119B00B5F714 /* UIViewMixinable.swift */,
+			);
+			path = Mixinable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +576,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "UIKitMixinable-iOS" */;
 			buildPhases = (
+				38B120EF157C24070F86D00C /* [CP] Check Pods Manifest.lock */,
 				D5B2E89A1C3A780C00C0327D /* Sources */,
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
 				D5B2E89C1C3A780C00C0327D /* Headers */,
@@ -444,7 +657,7 @@
 				TargetAttributes = {
 					D284B0FB1F79038B00D94AF3 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					D284B1031F79038B00D94AF3 = {
@@ -454,12 +667,12 @@
 					};
 					D284B1171F79039F00D94AF3 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					D5B2E89E1C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
@@ -467,6 +680,7 @@
 					};
 					D5C6293F1C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 1010;
 					};
 					D5C629481C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
@@ -551,13 +765,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38B120EF157C24070F86D00C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIKitMixinable-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D284B0F71F79038B00D94AF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D284B1491F790CA200D94AF3 /* Shared.swift in Sources */,
-				D284B1231F79041C00D94AF3 /* tvOS.swift in Sources */,
+				E453A78821BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */,
+				E453A75021BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */,
+				E453A73C21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
+				E453A75C21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
+				E453A74C21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E453A73421BB119B00B5F714 /* MixinableViewController.swift in Sources */,
+				E453A76821BB119B00B5F714 /* MixinableButton.swift in Sources */,
+				E453A73821BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
+				E453A76021BB119B00B5F714 /* MixinableView.swift in Sources */,
+				E453A78421BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E453A72C21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
+				E453A77C21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
+				E453A77021BB119B00B5F714 /* DefaultMixins.swift in Sources */,
+				E453A78021BB119B00B5F714 /* InitializableMixinable.swift in Sources */,
+				E453A76C21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */,
+				E453A74821BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */,
+				E453A75821BB119B00B5F714 /* MixinableScrollView.swift in Sources */,
+				E453A75421BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
+				E453A76421BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
+				E453A77821BB119B00B5F714 /* Mixinable.swift in Sources */,
+				E453A73021BB119B00B5F714 /* MixinableNavigationController.swift in Sources */,
+				E453A78C21BB119B00B5F714 /* UIViewMixinable.swift in Sources */,
+				E453A74421BB119B00B5F714 /* MixinableTextField.swift in Sources */,
+				E453A74021BB119B00B5F714 /* MixinablePageViewController.swift in Sources */,
+				E453A77421BB119B00B5F714 /* Mixin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,8 +836,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D284B14A1F790CA200D94AF3 /* Shared.swift in Sources */,
-				D284B1251F79042800D94AF3 /* watchOS.swift in Sources */,
+				E453A78921BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */,
+				E453A75121BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */,
+				E453A73D21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
+				E453A75D21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
+				E453A74D21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E453A73521BB119B00B5F714 /* MixinableViewController.swift in Sources */,
+				E453A76921BB119B00B5F714 /* MixinableButton.swift in Sources */,
+				E453A73921BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
+				E453A76121BB119B00B5F714 /* MixinableView.swift in Sources */,
+				E453A78521BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E453A72D21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
+				E453A77D21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
+				E453A77121BB119B00B5F714 /* DefaultMixins.swift in Sources */,
+				E453A78121BB119B00B5F714 /* InitializableMixinable.swift in Sources */,
+				E453A76D21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */,
+				E453A74921BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */,
+				E453A75921BB119B00B5F714 /* MixinableScrollView.swift in Sources */,
+				E453A75521BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
+				E453A76521BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
+				E453A77921BB119B00B5F714 /* Mixinable.swift in Sources */,
+				E453A73121BB119B00B5F714 /* MixinableNavigationController.swift in Sources */,
+				E453A78D21BB119B00B5F714 /* UIViewMixinable.swift in Sources */,
+				E453A74521BB119B00B5F714 /* MixinableTextField.swift in Sources */,
+				E453A74121BB119B00B5F714 /* MixinablePageViewController.swift in Sources */,
+				E453A77521BB119B00B5F714 /* Mixin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,8 +868,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629831C3A892A007F7B7C /* iOS.swift in Sources */,
-				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
+				E453A78621BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */,
+				E453A74E21BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */,
+				E453A73A21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
+				E453A75A21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
+				E453A74A21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E453A73221BB119B00B5F714 /* MixinableViewController.swift in Sources */,
+				E453A76621BB119B00B5F714 /* MixinableButton.swift in Sources */,
+				E453A73621BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
+				E453A75E21BB119B00B5F714 /* MixinableView.swift in Sources */,
+				E453A78221BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E453A72A21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
+				E453A77A21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
+				E453A76E21BB119B00B5F714 /* DefaultMixins.swift in Sources */,
+				E453A77E21BB119B00B5F714 /* InitializableMixinable.swift in Sources */,
+				E453A76A21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */,
+				E453A74621BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */,
+				E453A75621BB119B00B5F714 /* MixinableScrollView.swift in Sources */,
+				E453A75221BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
+				E453A76221BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
+				E453A77621BB119B00B5F714 /* Mixinable.swift in Sources */,
+				E453A72E21BB119B00B5F714 /* MixinableNavigationController.swift in Sources */,
+				E453A78A21BB119B00B5F714 /* UIViewMixinable.swift in Sources */,
+				E453A74221BB119B00B5F714 /* MixinableTextField.swift in Sources */,
+				E453A73E21BB119B00B5F714 /* MixinablePageViewController.swift in Sources */,
+				E453A77221BB119B00B5F714 /* Mixin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,8 +909,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */,
-				D284B0F61F79024300D94AF3 /* macOS.swift in Sources */,
+				E453A78721BB119B00B5F714 /* UIViewControllerMixinable.swift in Sources */,
+				E453A74F21BB119B00B5F714 /* MixinableTableViewHeaderFooterView.swift in Sources */,
+				E453A73B21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
+				E453A75B21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
+				E453A74B21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E453A73321BB119B00B5F714 /* MixinableViewController.swift in Sources */,
+				E453A76721BB119B00B5F714 /* MixinableButton.swift in Sources */,
+				E453A73721BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
+				E453A75F21BB119B00B5F714 /* MixinableView.swift in Sources */,
+				E453A78321BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E453A72B21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
+				E453A77B21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
+				E453A76F21BB119B00B5F714 /* DefaultMixins.swift in Sources */,
+				E453A77F21BB119B00B5F714 /* InitializableMixinable.swift in Sources */,
+				E453A76B21BB119B00B5F714 /* MixinableTableViewCell.swift in Sources */,
+				E453A74721BB119B00B5F714 /* MixinableCollectionViewCell.swift in Sources */,
+				E453A75721BB119B00B5F714 /* MixinableScrollView.swift in Sources */,
+				E453A75321BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
+				E453A76321BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
+				E453A77721BB119B00B5F714 /* Mixinable.swift in Sources */,
+				E453A72F21BB119B00B5F714 /* MixinableNavigationController.swift in Sources */,
+				E453A78B21BB119B00B5F714 /* UIViewMixinable.swift in Sources */,
+				E453A74321BB119B00B5F714 /* MixinableTextField.swift in Sources */,
+				E453A73F21BB119B00B5F714 /* MixinablePageViewController.swift in Sources */,
+				E453A77321BB119B00B5F714 /* Mixin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,6 +1247,7 @@
 		};
 		D5B2E8B41C3A780C00C0327D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C9190A564C437EE3D78E235 /* Pods-UIKitMixinable-iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -937,6 +1269,7 @@
 		};
 		D5B2E8B51C3A780C00C0327D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E620363C545C92B3D75AADD /* Pods-UIKitMixinable-iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -958,6 +1291,7 @@
 		D5B2E8B71C3A780C00C0327D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -975,6 +1309,7 @@
 		D5B2E8B81C3A780C00C0327D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1038,6 +1373,7 @@
 		D5C629551C3A7FAA007F7B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1057,6 +1393,7 @@
 		D5C629561C3A7FAA007F7B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -1,0 +1,21 @@
+PODS:
+  - DarkMagic (0.0.1)
+
+DEPENDENCIES:
+  - DarkMagic (from `https://github.com/appsaurus/DarkMagic.git`)
+
+EXTERNAL SOURCES:
+  DarkMagic:
+    :git: https://github.com/appsaurus/DarkMagic.git
+
+CHECKOUT OPTIONS:
+  DarkMagic:
+    :commit: 2f9737ee570a2aa5791788ee0d8f2e940ed4fb6b
+    :git: https://github.com/appsaurus/DarkMagic.git
+
+SPEC CHECKSUMS:
+  DarkMagic: 3bb176782b377087e1d4b4f33677a33b12d8807e
+
+PODFILE CHECKSUM: bbf64804a0dfd7ded33bb00cf2762fc2cf96815d
+
+COCOAPODS: 1.5.3
