@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "UIKitMixinable"
   s.summary          = "A short description of UIKitMixinable."
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.homepage         = "github.com/Strobocop/UIKitMixinable"
   s.license          = 'MIT'
   s.author           = { "Brian Strobach" => "brian@appsaurus.io" }
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Sources/{iOS,tvOS,Shared}/**/*'
   s.osx.source_files = 'Sources/{macOS,Shared}/**/*'
   s.watchos.source_files = 'Sources/{watchOS,Shared}/**/*'
-
+  
   s.ios.frameworks = 'UIKit', 'Foundation'
   # s.osx.frameworks = 'Cocoa', 'Foundation'
 

@@ -35,15 +35,15 @@ open class MixinablePageViewController: UIPageViewController, UIViewControllerMi
         didInit()
     }
     
-//    //MARK: UIPageViewController Initializers
-//    public override init(transitionStyle style: UIPageViewController.TransitionStyle,
-//                         navigationOrientation: UIPageViewController.NavigationOrientation,
-//                         options: [UIPageViewController.OptionsKey : Any]? = nil) {
-////        let options = convertFromOptionalUIPageViewControllerOptionsKeyDictionary(options)
-//        super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
-//        didInitProgramatically()
-//        didInit()
-//    }
+    //MARK: UIPageViewController Initializers
+    public override init(transitionStyle style: UIPageViewController.TransitionStyle,
+                         navigationOrientation: UIPageViewController.NavigationOrientation,
+                         options: [UIPageViewController.OptionsKey : Any]? = nil) {
+//        let options = convertFromOptionalUIPageViewControllerOptionsKeyDictionary(options)
+        super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
+        didInitProgramatically()
+        didInit()
+    }
     
     //MARK: InitializableLifeCycle
     open func didInit() {
