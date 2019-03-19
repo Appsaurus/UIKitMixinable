@@ -12,7 +12,7 @@ open class DefaultViewMixin: UIViewMixin<UIView>{}
 open class DefaultViewControllerMixin: UIViewControllerMixin<UIViewController>{
     open override func didInit() {
         mixable.automaticallyAdjustsScrollViewInsets = false
-        mixable.edgesForExtendedLayout = []
+        mixable.edgesForExtendedLayout = .all
         if #available(iOS 11.0, *) {
             mixable.additionalSafeAreaInsets = .zero
         }
