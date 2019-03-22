@@ -1,6 +1,6 @@
 //
 //  UINibLoadingMixinable.swift
-//  AppsaurusUIKit
+//  UIKitMixinable
 //
 //  Created by Brian Strobach on 12/4/18.
 //

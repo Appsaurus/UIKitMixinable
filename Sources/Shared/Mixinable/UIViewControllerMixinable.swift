@@ -1,6 +1,6 @@
 //
 //  UIViewControllerMixinable.swift
-//  AppsaurusUIKit
+//  UIKitMixinable
 //
 //  Created by Brian Strobach on 11/27/18.
 //

@@ -1,6 +1,6 @@
 //
 //  Mixinable.swift
-//  AppsaurusUIKit
+//  UIKitMixinable
 //
 //  Created by Brian Strobach on 11/28/18.
 //
