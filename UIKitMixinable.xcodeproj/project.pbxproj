@@ -20,6 +20,13 @@
 		D284B1481F7908BB00D94AF3 /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B12E1F7906DA00D94AF3 /* macOSTests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* UIKitMixinable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* UIKitMixinable.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* UIKitMixinable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* UIKitMixinable.framework */; };
+		E41D6F3322456D5300CA05C4 /* AppDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F3222456D5300CA05C4 /* AppDelegateMixinable.swift */; };
+		E41D6F3422456D5300CA05C4 /* AppDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F3222456D5300CA05C4 /* AppDelegateMixinable.swift */; };
+		E41D6F3522456D5300CA05C4 /* AppDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F3222456D5300CA05C4 /* AppDelegateMixinable.swift */; };
+		E41D6F3622456D5900CA05C4 /* AppDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F3222456D5300CA05C4 /* AppDelegateMixinable.swift */; };
+		E41D6F7222457C7400CA05C4 /* MixinableApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F7122457C7400CA05C4 /* MixinableApplicationDelegate.swift */; };
+		E41D6F7322457C7400CA05C4 /* MixinableApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F7122457C7400CA05C4 /* MixinableApplicationDelegate.swift */; };
+		E41D6F7422457C7400CA05C4 /* MixinableApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6F7122457C7400CA05C4 /* MixinableApplicationDelegate.swift */; };
 		E453A72A21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
 		E453A72B21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
 		E453A72C21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
@@ -169,6 +176,8 @@
 		D5B2E8A91C3A780C00C0327D /* UIKitMixinable-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitMixinable-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* UIKitMixinable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitMixinable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629491C3A7FAA007F7B7C /* UIKitMixinable-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKitMixinable-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41D6F3222456D5300CA05C4 /* AppDelegateMixinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateMixinable.swift; sourceTree = "<group>"; };
+		E41D6F7122457C7400CA05C4 /* MixinableApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixinableApplicationDelegate.swift; sourceTree = "<group>"; };
 		E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTabBarController.swift; sourceTree = "<group>"; };
 		E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableNavigationController.swift; sourceTree = "<group>"; };
 		E453A71121BB119A00B5F714 /* MixinableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +432,14 @@
 			path = UIKitMixinableTests;
 			sourceTree = "<group>";
 		};
+		E41D6F3122456D3800CA05C4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E41D6F3222456D5300CA05C4 /* AppDelegateMixinable.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		E453A70C21BB119A00B5F714 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +453,7 @@
 			children = (
 				E453A70E21BB119A00B5F714 /* ViewControllers */,
 				E453A71521BB119A00B5F714 /* Views */,
+				E41D6F7122457C7400CA05C4 /* MixinableApplicationDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -474,6 +492,7 @@
 		E453A72321BB119B00B5F714 /* Mixinable */ = {
 			isa = PBXGroup;
 			children = (
+				E41D6F3122456D3800CA05C4 /* AppDelegate */,
 				E453A72421BB119B00B5F714 /* Mixinable.swift */,
 				E453A72521BB119B00B5F714 /* SuperviewMixinable.swift */,
 				E453A72621BB119B00B5F714 /* InitializableMixinable.swift */,
@@ -800,11 +819,13 @@
 				E453A73C21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
 				E453A75C21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
 				E453A74C21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E41D6F7422457C7400CA05C4 /* MixinableApplicationDelegate.swift in Sources */,
 				E453A73421BB119B00B5F714 /* MixinableViewController.swift in Sources */,
 				E453A76821BB119B00B5F714 /* MixinableButton.swift in Sources */,
 				E453A73821BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A76021BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78421BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6F3522456D5300CA05C4 /* AppDelegateMixinable.swift in Sources */,
 				E453A72C21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
 				E453A77C21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
 				E453A77021BB119B00B5F714 /* DefaultMixins.swift in Sources */,
@@ -846,6 +867,7 @@
 				E453A73921BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A76121BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78521BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6F3622456D5900CA05C4 /* AppDelegateMixinable.swift in Sources */,
 				E453A72D21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
 				E453A77D21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
 				E453A77121BB119B00B5F714 /* DefaultMixins.swift in Sources */,
@@ -873,11 +895,13 @@
 				E453A73A21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
 				E453A75A21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
 				E453A74A21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E41D6F7222457C7400CA05C4 /* MixinableApplicationDelegate.swift in Sources */,
 				E453A73221BB119B00B5F714 /* MixinableViewController.swift in Sources */,
 				E453A76621BB119B00B5F714 /* MixinableButton.swift in Sources */,
 				E453A73621BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A75E21BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78221BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6F3322456D5300CA05C4 /* AppDelegateMixinable.swift in Sources */,
 				E453A72A21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
 				E453A77A21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
 				E453A76E21BB119B00B5F714 /* DefaultMixins.swift in Sources */,
@@ -914,11 +938,13 @@
 				E453A73B21BB119B00B5F714 /* MixinableCollectionViewController.swift in Sources */,
 				E453A75B21BB119B00B5F714 /* MixinableToolbar.swift in Sources */,
 				E453A74B21BB119B00B5F714 /* MixinableImageView.swift in Sources */,
+				E41D6F7322457C7400CA05C4 /* MixinableApplicationDelegate.swift in Sources */,
 				E453A73321BB119B00B5F714 /* MixinableViewController.swift in Sources */,
 				E453A76721BB119B00B5F714 /* MixinableButton.swift in Sources */,
 				E453A73721BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A75F21BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78321BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6F3422456D5300CA05C4 /* AppDelegateMixinable.swift in Sources */,
 				E453A72B21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
 				E453A77B21BB119B00B5F714 /* SuperviewMixinable.swift in Sources */,
 				E453A76F21BB119B00B5F714 /* DefaultMixins.swift in Sources */,
