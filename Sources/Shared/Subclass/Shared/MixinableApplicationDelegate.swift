@@ -76,8 +76,21 @@ open class MixinableApplicationDelegate: UIResponder, UIApplicationDelegate, UIA
     }
 
 
+    //MARK: Notification Registration
 
-    // MARK: Notifications
+    open func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+
+    }
+
+    open func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+
+    }
+
+    open func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+
+    }
+
+    // MARK: Notifications Handling
     open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         mix_application(application, didReceiveRemoteNotification: userInfo)
     }

@@ -36,6 +36,12 @@ open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDe
 
     open func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {}
 
+    //MARK: Notification Registration
+    open func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {}
+    open func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {}
+    open func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {}
+
+    //MARK: Notification Handling
     open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {}
 
     open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {}
@@ -85,6 +91,13 @@ public protocol UIApplicationDelegateLifeCycle: LifeCycle{
 
     func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect)
 
+
+    //MARK: Notification Registration
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings)
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
+
+    //MARK: Notification Handling
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any])
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
@@ -152,9 +165,19 @@ extension UIApplicationDelegateMixinable{
         appDelegateMixins.forEach { $0.application(application, willChangeStatusBarFrame: newStatusBarFrame)}
     }
 
+    //MARK: Notification Registration
+    public func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        appDelegateMixins.forEach { $0.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken) }
+    }
 
+    public func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        appDelegateMixins.forEach { $0.application(application, didRegister: notificationSettings) }
+    }
 
-    // MARK: Notifications
+    public func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        appDelegateMixins.forEach { $0.application(application, didFailToRegisterForRemoteNotificationsWithError: error) }
+    }
+    // MARK: Notifications Handling
     public func mix_application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         appDelegateMixins.forEach { $0.application(application, didReceiveRemoteNotification: userInfo)}
     }
