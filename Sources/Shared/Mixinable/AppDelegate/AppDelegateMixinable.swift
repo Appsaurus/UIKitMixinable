@@ -9,12 +9,14 @@
 #if canImport(UIKit)
 import UIKit
 
-open class UIApplicationDelegateMixin: Mixin<UIApplicationDelegate> & UIApplicationDelegateLifeCycle{
+open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDelegateLifeCycle{
     open func didInit() {}
 
-    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
-        return true
-    }
+    open func applicationDidFinishLaunching(_ application: UIApplication) {}
+
+    open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool { return true }
+
+    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool { return true }
 
     open func applicationWillResignActive(_ application: UIApplication) {}
 
@@ -25,11 +27,36 @@ open class UIApplicationDelegateMixin: Mixin<UIApplicationDelegate> & UIApplicat
     open func applicationDidBecomeActive(_ application: UIApplication) {}
 
     open func applicationWillTerminate(_ application: UIApplication) {}
+
+    open func applicationDidReceiveMemoryWarning(_ application: UIApplication) {}
+
+    open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool { return true }
+
+    open func applicationSignificantTimeChange(_ application: UIApplication) {}
+
+    open func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {}
+
+    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {}
+
+    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {}
+
+    open func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {}
+
+    open func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {}
+
+    open func application(_ application: UIApplication, handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?, reply: @escaping ([AnyHashable : Any]?) -> Void) {}
+
+
 }
 
 public protocol UIApplicationDelegateLifeCycle: LifeCycle{
 
     func didInit()
+
+    func applicationDidFinishLaunching(_ application: UIApplication)
+
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool
+
     // Override point for customization after application launch.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 
@@ -49,6 +76,24 @@ public protocol UIApplicationDelegateLifeCycle: LifeCycle{
 
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     func applicationWillTerminate(_ application: UIApplication)
+
+    func applicationDidReceiveMemoryWarning(_ application: UIApplication)
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
+
+    func applicationSignificantTimeChange(_ application: UIApplication)
+
+    func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect)
+
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any])
+
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void)
+
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void)
+
+    func application(_ application: UIApplication, handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?, reply: @escaping ([AnyHashable : Any]?) -> Void)
 }
 
 public protocol UIApplicationDelegateMixinable: Mixinable {}
@@ -61,6 +106,14 @@ extension UIApplicationDelegateMixinable{
 
     public func mix_didInit() {
         appDelegateMixins.forEach{$0.didInit()}
+    }
+
+    public func mix_applicationDidFinishLaunching(_ application: UIApplication) {
+        appDelegateMixins.forEach{ $0.applicationDidFinishLaunching(application) }
+    }
+
+    public func mix_application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> [Bool] {
+        return appDelegateMixins.map{ $0.application(application, willFinishLaunchingWithOptions: launchOptions)}
     }
 
     @discardableResult
@@ -79,9 +132,48 @@ extension UIApplicationDelegateMixinable{
     public func mix_applicationDidBecomeActive(_ application: UIApplication){
         appDelegateMixins.forEach{$0.applicationDidBecomeActive(application)}
     }
-
     public func mix_applicationWillTerminate(_ application: UIApplication){
         appDelegateMixins.forEach{$0.applicationWillTerminate(application)}
+    }
+
+    public func mix_applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+        appDelegateMixins.forEach { $0.applicationDidReceiveMemoryWarning(application)}
+    }
+
+    public func mix_application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> [Bool] {
+        return appDelegateMixins.map { $0.application(app, open: url, options: options) }
+    }
+
+    public func mix_applicationSignificantTimeChange(_ application: UIApplication) {
+        appDelegateMixins.forEach { $0.applicationSignificantTimeChange(application)}
+    }
+
+    public func mix_application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {
+        appDelegateMixins.forEach { $0.application(application, willChangeStatusBarFrame: newStatusBarFrame)}
+    }
+
+
+
+    // MARK: Notifications
+    public func mix_application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        appDelegateMixins.forEach { $0.application(application, didReceiveRemoteNotification: userInfo)}
+    }
+
+    public func mix_application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        appDelegateMixins.forEach { $0.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)}
+    }
+
+    // MARK: Application Shortcut Items
+    public func mix_application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        appDelegateMixins.forEach { $0.application(application, performActionFor: shortcutItem, completionHandler: completionHandler)}
+    }
+
+    public func mix_application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        appDelegateMixins.forEach { $0.application(application, handleEventsForBackgroundURLSession: identifier, completionHandler: completionHandler)}
+    }
+
+    public func mix_application(_ application: UIApplication, handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?, reply: @escaping ([AnyHashable : Any]?) -> Void) {
+        appDelegateMixins.forEach { $0.application(application, handleWatchKitExtensionRequest: userInfo, reply: reply)}
     }
 }
 #endif
