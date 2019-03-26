@@ -11,7 +11,7 @@ extension MixinableAppDelegate {
 
     @available(iOS 9.0, *)
     open func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.applicationShouldRequestHealthAuthorization?(application)
         }
     }

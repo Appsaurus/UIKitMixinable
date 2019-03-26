@@ -49,7 +49,6 @@ extension InitializableMixinable{
         initMixins.forEach{$0.didInitProgramatically()}
     }
     
-    
     public func mix_didInit() {
         initMixins.forEach{$0.didInit()}
     }

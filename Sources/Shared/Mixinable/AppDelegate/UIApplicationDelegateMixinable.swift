@@ -20,3 +20,5 @@ extension UIApplicationDelegateLifeCycle {
 open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDelegateLifeCycle{
     open func didInit() {}
 }
+
+public protocol UIApplicationDelegateMixinable: Mixinable {}

@@ -12,35 +12,35 @@ extension MixinableAppDelegate {
     // This callback will be made upon calling -[UIApplication registerUserNotificationSettings:]. The settings the user has granted to the application will be passed in as the second argument.
     @available(iOS, introduced: 8.0, deprecated: 10.0, message: "Use UserNotification UNNotification Settings instead")
     open func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.application?(application, didRegister: notificationSettings)
         }
     }
 
     @available(iOS 3.0, *)
     open func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.application?(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
         }
     }
 
     @available(iOS 3.0, *)
     open func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.application?(application, didFailToRegisterForRemoteNotificationsWithError: error)
         }
     }
 
     @available(iOS, introduced: 3.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:] for user visible notifications and -[UIApplicationDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:] for silent remote notifications")
     open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.application?(application, didReceiveRemoteNotification: userInfo)
         }
     }
 
     @available(iOS, introduced: 4.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
     open func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.application?(application, didReceive: notification)
         }
     }

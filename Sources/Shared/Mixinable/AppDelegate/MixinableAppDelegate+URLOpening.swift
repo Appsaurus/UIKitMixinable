@@ -11,6 +11,6 @@ extension MixinableAppDelegate {
 
     @available(iOS 9.0, *)
     open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        return mixins.compactMap { $0.application?(app, open: url, options: options) }.contains(true)
+        return appDelegateMixins.compactMap { $0.application?(app, open: url, options: options) }.contains(true)
     }
 }

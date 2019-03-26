@@ -14,6 +14,6 @@ extension MixinableAppDelegate {
     // If unimplemented, the default behavior is to allow the extension point identifier.
     @available(iOS 8.0, *)
     open func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool {
-        return mixins.compactMap { $0.application?(application, shouldAllowExtensionPointIdentifier: extensionPointIdentifier) }.contains(true)
+        return appDelegateMixins.compactMap { $0.application?(application, shouldAllowExtensionPointIdentifier: extensionPointIdentifier) }.contains(true)
     }
 }

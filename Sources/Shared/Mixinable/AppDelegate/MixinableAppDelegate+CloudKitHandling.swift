@@ -15,7 +15,7 @@ extension MixinableAppDelegate {
     // the resulting CKShare and its associated record(s), which will appear in the CKContainer's shared database in a zone matching that of the record's owner.
     @available(iOS 10.0, *)
     open func application(_ application: UIApplication, userDidAcceptCloudKitShareWith cloudKitShareMetadata: CKShare.Metadata) {
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             mixin.application?(application, userDidAcceptCloudKitShareWith: cloudKitShareMetadata)
         }
     }

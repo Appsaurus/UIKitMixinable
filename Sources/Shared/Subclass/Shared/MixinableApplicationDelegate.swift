@@ -8,12 +8,12 @@
 
 import UIKit
 
-open class MixinableAppDelegate: UIResponder, UIApplicationDelegate {
+open class MixinableAppDelegate: UIResponder, UIApplicationDelegate, Mixinable {
     open var window: UIWindow?
 
-    open lazy var mixins: [UIApplicationDelegateLifeCycle] = self.createMixins()
-
-    open func createMixins() -> [UIApplicationDelegateLifeCycle] {
+    open lazy var mixins: [LifeCycle] = self.createMixins()
+    open lazy var appDelegateMixins: [UIApplicationDelegateLifeCycle] = self.mixins.compactMap{ $0 as? UIApplicationDelegateLifeCycle }
+    public func createMixins() -> [LifeCycle] {
         return []
     }
 
@@ -32,7 +32,7 @@ open class MixinableAppDelegate: UIResponder, UIApplicationDelegate {
         var results: [T] = []
         var returns: [S] = []
 
-        for mixin in mixins {
+        for mixin in appDelegateMixins {
             dispatchGroup.enter()
             let returned = work(mixin, { result in
                 results.append(result)
