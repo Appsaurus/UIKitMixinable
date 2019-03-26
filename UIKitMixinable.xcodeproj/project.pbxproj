@@ -83,6 +83,10 @@
 		E41D6FE0224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FA6224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift */; };
 		E41D6FE1224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FA6224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift */; };
 		E41D6FE2224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FA6224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift */; };
+		E41D6FE4224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FE3224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift */; };
+		E41D6FE5224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FE3224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift */; };
+		E41D6FE6224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FE3224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift */; };
+		E41D6FE7224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6FE3224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift */; };
 		E453A72A21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
 		E453A72B21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
 		E453A72C21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */; };
@@ -248,6 +252,7 @@
 		E41D6FA4224A7DCD00CA05C4 /* MixinableAppDelegate+CloudKitHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MixinableAppDelegate+CloudKitHandling.swift"; sourceTree = "<group>"; };
 		E41D6FA5224A7DCD00CA05C4 /* MixinableAppDelegate+AppStateAndSystemEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MixinableAppDelegate+AppStateAndSystemEvents.swift"; sourceTree = "<group>"; };
 		E41D6FA6224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MixinableAppDelegate+RemoteNotification.swift"; sourceTree = "<group>"; };
+		E41D6FE3224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationCenterDelegateMixinable.swift; sourceTree = "<group>"; };
 		E453A70F21BB119A00B5F714 /* MixinableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableTabBarController.swift; sourceTree = "<group>"; };
 		E453A71021BB119A00B5F714 /* MixinableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableNavigationController.swift; sourceTree = "<group>"; };
 		E453A71121BB119A00B5F714 /* MixinableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixinableViewController.swift; sourceTree = "<group>"; };
@@ -520,6 +525,7 @@
 				E41D6FA2224A7DCD00CA05C4 /* MixinableAppDelegate+SiriKitHandling.swift */,
 				E41D6F9E224A7DCC00CA05C4 /* MixinableAppDelegate+URLOpening.swift */,
 				E41D6F9D224A7DCC00CA05C4 /* MixinableAppDelegate+WatchKitInteracting.swift */,
+				E41D6FE3224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -913,6 +919,7 @@
 				E453A73821BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A76021BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78421BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6FE6224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */,
 				E41D6FAD224A7DCD00CA05C4 /* MixinableAppDelegate+DownloadingData.swift in Sources */,
 				E41D6FB9224A7DCD00CA05C4 /* MixinableAppDelegate+AppStateRestoration.swift in Sources */,
 				E453A72C21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
@@ -969,6 +976,7 @@
 				E41D6FBA224A7DCD00CA05C4 /* MixinableAppDelegate+AppStateRestoration.swift in Sources */,
 				E41D6FBE224A7DCD00CA05C4 /* MixinableAppDelegate+WatchKitInteracting.swift in Sources */,
 				E453A76921BB119B00B5F714 /* MixinableButton.swift in Sources */,
+				E41D6FE7224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */,
 				E453A73921BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A76121BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E41D6FD6224A7DCD00CA05C4 /* MixinableAppDelegate+AppInitializing.swift in Sources */,
@@ -1017,6 +1025,7 @@
 				E453A73621BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A75E21BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78221BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6FE4224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */,
 				E41D6FAB224A7DCD00CA05C4 /* MixinableAppDelegate+DownloadingData.swift in Sources */,
 				E41D6FB7224A7DCD00CA05C4 /* MixinableAppDelegate+AppStateRestoration.swift in Sources */,
 				E453A72A21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
@@ -1074,6 +1083,7 @@
 				E453A73721BB119B00B5F714 /* MixinableTableViewController.swift in Sources */,
 				E453A75F21BB119B00B5F714 /* MixinableView.swift in Sources */,
 				E453A78321BB119B00B5F714 /* UINibLoadingMixinable.swift in Sources */,
+				E41D6FE5224A8CF200CA05C4 /* UserNotificationCenterDelegateMixinable.swift in Sources */,
 				E41D6FAC224A7DCD00CA05C4 /* MixinableAppDelegate+DownloadingData.swift in Sources */,
 				E41D6FB8224A7DCD00CA05C4 /* MixinableAppDelegate+AppStateRestoration.swift in Sources */,
 				E453A72B21BB119B00B5F714 /* MixinableTabBarController.swift in Sources */,
