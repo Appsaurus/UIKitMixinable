@@ -277,7 +277,7 @@
 		E453A78F21BB11FB00B5F714 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E453A79021BB11FB00B5F714 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E453A79121BB11FB00B5F714 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		E453A79221BB11FB00B5F714 /* UIKitMixinable.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIKitMixinable.podspec; sourceTree = "<group>"; };
+		E453A79221BB11FB00B5F714 /* UIKitMixinable.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIKitMixinable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E453A79321BB11FB00B5F714 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		E453A79421BB11FB00B5F714 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
 		E453A79521BB11FB00B5F714 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
