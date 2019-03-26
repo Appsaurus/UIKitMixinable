@@ -1,0 +1,40 @@
+//
+//  MixinableAppDelegate+AppStateRestoration.swift
+//  UIKitMixinable
+//
+//  Created by Brian Strobach on 12/4/18.
+//
+
+import UIKit
+
+extension MixinableAppDelegate {
+
+    @available(iOS 6.0, *)
+    open func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        return mixins.compactMap { $0.application?(application, shouldSaveApplicationState: coder) }.contains(true)
+    }
+
+    @available(iOS 6.0, *)
+    open func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return mixins.compactMap { $0.application?(application, shouldRestoreApplicationState: coder) }.contains(true)
+    }
+
+    @available(iOS 6.0, *)
+    open func application(_ application: UIApplication, viewControllerWithRestorationIdentifierPath identifierComponents: [String], coder: NSCoder) -> UIViewController? {
+        return mixins.compactMap { $0.application?(application, viewControllerWithRestorationIdentifierPath: identifierComponents, coder: coder) }.first        
+    }
+
+    @available(iOS 6.0, *)
+    open func application(_ application: UIApplication, willEncodeRestorableStateWith coder: NSCoder) {
+        for mixin in mixins {
+            mixin.application?(application, willEncodeRestorableStateWith: coder)
+        }
+    }
+
+    @available(iOS 6.0, *)
+    open func application(_ application: UIApplication, didDecodeRestorableStateWith coder: NSCoder) {
+        for mixin in mixins {
+            mixin.application?(application, didDecodeRestorableStateWith: coder)
+        }
+    }
+}

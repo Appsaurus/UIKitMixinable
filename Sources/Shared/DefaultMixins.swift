@@ -22,11 +22,6 @@ open class DefaultViewControllerMixin: UIViewControllerMixin<UIViewController>{
 public typealias DefaultMixinsClosure<O: NSObjectProtocol> = (_ object: O) -> [LifeCycle]
 open class DefaultMixins{
 
-    //MARK: ApplicationDelegate
-    //MARK: ViewControllers
-    static public var applicationDelegate: DefaultMixinsClosure<UIApplicationDelegate> = { vc in
-        return []
-    }
 
     //MARK: ViewControllers
     static public var viewControllers: DefaultMixinsClosure<UIViewController> = { vc in

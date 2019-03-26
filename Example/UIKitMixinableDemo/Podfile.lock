@@ -1,6 +1,6 @@
 PODS:
   - DarkMagic (0.0.1)
-  - UIKitMixinable (0.0.1)
+  - UIKitMixinable (0.0.7)
 
 DEPENDENCIES:
   - DarkMagic (from `https://github.com/appsaurus/DarkMagic.git`)
@@ -19,7 +19,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   DarkMagic: 3bb176782b377087e1d4b4f33677a33b12d8807e
-  UIKitMixinable: e36e3118087e1968fb03a3d1000ad62683551101
+  UIKitMixinable: f76fc0a7aa55fb7a8b452f2024cbbda7296e2002
 
 PODFILE CHECKSUM: db98b0bfd01ea983374598cc07b73c328f4010ca
 
