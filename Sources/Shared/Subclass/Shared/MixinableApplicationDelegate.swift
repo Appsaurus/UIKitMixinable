@@ -17,7 +17,7 @@ open class MixinableAppDelegate: UIResponder, UIApplicationDelegate, Mixinable {
     @available(iOS 10, *)
     open lazy var userNotificationMixins: [UNUserNotificationCenterDelegateLifeCycle] = self.mixins.compactMap{ $0 as? UNUserNotificationCenterDelegateLifeCycle }
 
-    public func createMixins() -> [LifeCycle] {
+    open func createMixins() -> [LifeCycle] {
         return []
     }
 
