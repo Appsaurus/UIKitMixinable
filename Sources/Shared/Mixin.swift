@@ -7,7 +7,7 @@
 
 import Foundation
 
-open class Mixin<Mixable>{
+open class Mixin<Mixable>: NSObject {
     open var mixable: Mixable
     
     public required init(_ mixable: Mixable){

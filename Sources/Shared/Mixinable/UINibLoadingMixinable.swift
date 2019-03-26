@@ -8,8 +8,8 @@
 import Foundation
 
 open class NibLoadingMixin<Mixable>: InitializableMixin<Mixable>{
-    open func awakeFromNib(){}
-    open func prepareForInterfaceBuilder(){}
+//    open func awakeFromNib(){}
+//    open func prepareForInterfaceBuilder(){}
 }
 
 public protocol NibLoadingLifeCycle: InitializableLifeCycle{
