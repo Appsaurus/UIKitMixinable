@@ -21,7 +21,7 @@ extension UIApplicationDelegateLifeCycle {
 
 open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDelegateLifeCycle{
     open func didInit() {}
-    
+
     open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool { return true }
     open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool { return true }
     open func applicationDidFinishLaunching(_ application: UIApplication) {}
@@ -57,26 +57,18 @@ open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDe
     open func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {}
     open func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {}
     open func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {}
-    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        print("GOTEM")
-    }
-    open func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-                print("GOTEM")
-    }
+    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {}
+    open func application(_ application: UIApplication, didReceive notification: UILocalNotification) {}
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Swift.Void) {}
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable: Any], withResponseInfo responseInfo: [AnyHashable: Any], completionHandler: @escaping () -> Swift.Void) {}
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable: Any], completionHandler: @escaping () -> Swift.Void) {}
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, withResponseInfo responseInfo: [AnyHashable: Any], completionHandler: @escaping () -> Swift.Void) {}
-    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void) {
-        print("GOTEM")
-    }
+    open func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void) {}
     @available(iOS 10.0, *)
     open func application(_ application: UIApplication, handle intent: INIntent, completionHandler: @escaping (INIntentResponse) -> Swift.Void) {}
     open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool { return true }
     open func application(_ application: UIApplication, handleWatchKitExtensionRequest userInfo: [AnyHashable: Any]?, reply: @escaping ([AnyHashable: Any]?) -> Swift.Void) {}
-    
+
 }
 
-public protocol UIApplicationDelegateMixinable: Mixinable {
-    
-}
+public protocol UIApplicationDelegateMixinable: Mixinable {}
