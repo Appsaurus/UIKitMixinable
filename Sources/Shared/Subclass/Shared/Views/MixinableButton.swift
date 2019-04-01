@@ -20,14 +20,12 @@ open class MixinableButton: UIButton, UIViewMixinable{
         super.init(frame: .zero)
         if callDidInit{
             initLifecycle(.programmatically)
-            mix_superviewLifecycle()
         }
     }
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initLifecycle(.programmatically)
-        mix_superviewLifecycle()
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -42,20 +40,10 @@ open class MixinableButton: UIButton, UIViewMixinable{
     open func initDerivedProperties() {
         mix_initDerivedProperties()
     }
-    open func didInit() {
-        mix_didInit()
-    }
-
-    open func didInitProgramatically() {
-        mix_didInitProgramatically()
-    }
-
-    open func didInitFromNib() {
-        mix_didInitFromNib()
-    }
-
-    open func didInitFromCoder() {
-        mix_didInitFromCoder()
+    open func didInit(type: InitializationType) {
+        mix_didInit(type: type)
+        guard type == .programmatically else { return }
+        mix_superviewLifecycle()
     }
     
     //MARK: SuperviewLifeCycle

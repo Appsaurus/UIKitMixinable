@@ -24,7 +24,6 @@ open class MixinableTableViewHeaderFooterView: UITableViewHeaderFooterView, UIVi
         super.init(reuseIdentifier: nil)
         if callDidInit{
             initLifecycle(.programmatically)
-            mix_superviewLifecycle()
         }
     }
     
@@ -37,7 +36,6 @@ open class MixinableTableViewHeaderFooterView: UITableViewHeaderFooterView, UIVi
     public override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         initLifecycle(.programmatically)
-        mix_superviewLifecycle()
     }
     
     //MARK: InitializableLifeCycle
@@ -47,20 +45,10 @@ open class MixinableTableViewHeaderFooterView: UITableViewHeaderFooterView, UIVi
     open func initDerivedProperties() {
         mix_initDerivedProperties()
     }
-    open func didInit() {
-        mix_didInit()
-    }
-    
-    open func didInitProgramatically() {
-        mix_didInitProgramatically()
-    }
-    
-    open func didInitFromNib() {
-        mix_didInitFromNib()
-    }
-    
-    public func didInitFromCoder() {
-        mix_didInitFromCoder()
+    open func didInit(type: InitializationType) {
+        mix_didInit(type: type)
+        guard type == .programmatically else { return }
+        mix_superviewLifecycle()
     }
     
     //MARK: SuperviewLifeCycle

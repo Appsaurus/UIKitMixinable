@@ -24,14 +24,12 @@ open class MixinableTextField: UITextField, UIViewMixinable{
         super.init(frame: .zero)
         if callDidInit{
             initLifecycle(.programmatically)
-            mix_superviewLifecycle()
         }
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initLifecycle(.programmatically)
-        mix_superviewLifecycle()
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -48,22 +46,12 @@ open class MixinableTextField: UITextField, UIViewMixinable{
         mix_initDerivedProperties()
     }
 
-    open func didInit() {
-        mix_didInit()
+    open func didInit(type: InitializationType) {
+        mix_didInit(type: type)
+        guard type == .programmatically else { return }
+        mix_superviewLifecycle()
     }
 
-    open func didInitProgramatically() {
-        mix_didInitProgramatically()
-    }
-    
-    open func didInitFromNib() {
-        mix_didInitFromNib()
-    }
-    
-    public func didInitFromCoder() {
-        mix_didInitFromCoder()
-    }
-    
     //MARK: SuperviewLifeCycle
     open func createSubviews() {
         mix_createSubviews()

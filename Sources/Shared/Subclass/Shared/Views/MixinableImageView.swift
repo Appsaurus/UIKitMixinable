@@ -25,14 +25,12 @@ open class MixinableImageView: UIImageView, UIViewMixinable{
         super.init(frame: .zero)
         if callDidInit{
             initLifecycle(.programmatically)
-            mix_superviewLifecycle()
         }
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initLifecycle(.programmatically)
-        mix_superviewLifecycle()
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -44,13 +42,11 @@ open class MixinableImageView: UIImageView, UIViewMixinable{
     public override init(image: UIImage?) {
         super.init(image: image)
         initLifecycle(.programmatically)
-        mix_superviewLifecycle()
     }
     
     public override init(image: UIImage?, highlightedImage: UIImage?) {
         super.init(image: image, highlightedImage: highlightedImage)
         initLifecycle(.programmatically)
-        mix_superviewLifecycle()
     }
     
     //MARK: InitializableLifeCycle
@@ -60,20 +56,10 @@ open class MixinableImageView: UIImageView, UIViewMixinable{
     open func initDerivedProperties() {
         mix_initDerivedProperties()
     }
-    open func didInit() {
-        mix_didInit()
-    }
-    
-    open func didInitProgramatically() {
-        mix_didInitProgramatically()
-    }
-    
-    open func didInitFromNib() {
-        mix_didInitFromNib()
-    }
-    
-    public func didInitFromCoder() {
-        mix_didInitFromCoder()
+    open func didInit(type: InitializationType) {
+        mix_didInit(type: type)
+        guard type == .programmatically else { return }
+        mix_superviewLifecycle()
     }
     
     //MARK: SuperviewLifeCycle

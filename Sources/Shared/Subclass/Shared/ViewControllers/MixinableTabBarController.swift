@@ -43,20 +43,8 @@ open class MixinableTabBarController: UITabBarController, UIViewControllerMixina
         mix_initDerivedProperties()
     }
 
-    open func didInit() {
-        mix_didInit()
-    }
-
-    open func didInitProgramatically() {
-        mix_didInitProgramatically()
-    }
-
-    open func didInitFromCoder() {
-        mix_didInitFromCoder()
-    }
-
-    open func didInitFromNib() {
-        mix_didInitFromNib()
+    open func didInit(type: InitializationType) {
+        mix_didInit(type: type)
     }
 
     deinit {
