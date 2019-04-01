@@ -24,25 +24,30 @@ open class MixinableViewController: UIViewController, UIViewControllerMixinable{
     public init(callDidInit: Bool){
         super.init(nibName: nil, bundle: nil)
         if callDidInit{
-            didInitProgramatically()
-            didInit()
+            initLifecycle(.programmatically)
         }
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
-        didInit()
+        initLifecycle(.coder)
     }
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        didInitFromNib()
-        didInit()
+        initLifecycle(.nib)
     }
     
     
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
+
     open func didInit() {
         mix_didInit()
     }

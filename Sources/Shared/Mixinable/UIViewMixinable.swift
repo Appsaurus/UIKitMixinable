@@ -28,7 +28,6 @@ open class UIViewMixin<Mixable>: SuperviewMixin<Mixable> & UIViewLifeCycle{
 
 public protocol UIViewMixinable: SuperviewMixinable{}
 
-
 extension UIViewMixinable{
     
     public var viewMixins: [UIViewLifeCycle]{

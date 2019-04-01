@@ -7,12 +7,6 @@
 
 import UIKit
 
-internal enum InitializationType {
-    case coder
-    case nib
-    case other
-}
-
 // NOTE: UITabBarController initialization lifecycle is unique in that it calls viewDidLoad() when you call super.init(),
 // therefore didInit methods need to be handled in loadView() in order for them to behave as expected.
 
@@ -24,21 +18,31 @@ open class MixinableTabBarController: UITabBarController, UIViewControllerMixina
         return DefaultMixins.tabBarController(self)
     }
 
-    internal var initializationType: InitializationType = .other
+    internal var initializationType: InitializationType = .programmatically
     //MARK: Initializers
 
     public required init?(coder aDecoder: NSCoder) {
         initializationType = .coder
         super.init(coder: aDecoder)
+        initAllProperties()
     }
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         initializationType = .nib
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        initAllProperties()
     }
 
 
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
+
     open func didInit() {
         mix_didInit()
     }
@@ -80,14 +84,7 @@ open class MixinableTabBarController: UITabBarController, UIViewControllerMixina
 
     //MARK: UIViewControllerLifeCycle
     open override func loadView() {
-        switch initializationType {
-        case .nib:
-            didInitFromNib()
-        case .coder:
-            didInitFromCoder()
-        default: break
-        }
-        didInit()
+        initLifecycle(initializationType)
         super.loadView()
         mix_loadView()
     }

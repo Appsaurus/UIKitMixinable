@@ -19,30 +19,34 @@ open class MixinableNavigationController: UINavigationController, UIViewControll
     //MARK: Initializers
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
-        didInit()
+        initLifecycle(.coder)
     }
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        didInitFromNib()
-        didInit()
+        initLifecycle(.nib)
     }
     
     //MARK: NavigationController Initializers
     override public init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
     
     override public init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
         super.init(navigationBarClass: navigationBarClass, toolbarClass: toolbarClass)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
     
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
+
     open func didInit() {
         mix_didInit()
     }

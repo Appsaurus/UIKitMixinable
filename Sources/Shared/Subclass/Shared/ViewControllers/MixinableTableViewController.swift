@@ -19,38 +19,39 @@ open class MixinableTableViewController: UITableViewController, UIViewController
     //MARK: Initializers
     public init(){
         super.init(style: .grouped)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
     
     public init(callDidInit: Bool){
         super.init(style: .grouped)
         if callDidInit{
-            didInitProgramatically()
-            didInit()
+        initLifecycle(.programmatically)
         }
     }
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
-        didInit()
+        initLifecycle(.coder)
     }
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        didInitFromNib()
-        didInit()
+        initLifecycle(.nib)
     }
 
     //MARK: TableView Initializers
     public override init(style: UITableView.Style) {
         super.init(style: style)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
 
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
     open func didInit() {
         mix_didInit()
     }

@@ -18,38 +18,39 @@ open class MixinableCollectionViewController: UICollectionViewController, UIView
     //MARK: Initializers
     public init(){
         super.init(nibName: nil, bundle: nil)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
     
     public init(callDidInit: Bool){
         super.init(nibName: nil, bundle: nil)
         if callDidInit{
-            didInitProgramatically()
-            didInit()
+        initLifecycle(.programmatically)
         }
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
-        didInit()
+        initLifecycle(.coder)
     }
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        didInitFromNib()
-        didInit()
+        initLifecycle(.nib)
     }
     
     //MARK: CollectionViewController Initializers
     public override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
     
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
     open func didInit() {
         mix_didInit()
     }

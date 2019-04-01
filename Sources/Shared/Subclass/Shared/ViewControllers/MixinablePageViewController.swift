@@ -24,15 +24,13 @@ open class MixinablePageViewController: UIPageViewController, UIViewControllerMi
     public init(callDidInit: Bool){
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         if callDidInit{
-            didInitProgramatically()
-            didInit()
+        initLifecycle(.programmatically)
         }
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
-        didInit()
+        initLifecycle(.coder)
     }
     
     //MARK: UIPageViewController Initializers
@@ -41,11 +39,16 @@ open class MixinablePageViewController: UIPageViewController, UIViewControllerMi
                          options: [UIPageViewController.OptionsKey : Any]? = nil) {
 //        let options = convertFromOptionalUIPageViewControllerOptionsKeyDictionary(options)
         super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
-        didInitProgramatically()
-        didInit()
+        initLifecycle(.programmatically)
     }
     
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
     open func didInit() {
         mix_didInit()
     }

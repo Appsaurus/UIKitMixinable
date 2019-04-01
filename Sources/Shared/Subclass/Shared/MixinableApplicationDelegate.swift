@@ -10,19 +10,27 @@ import UIKit
 
 open class MixinableAppDelegate: UIResponder, UIApplicationDelegate, Mixinable {
     open var window: UIWindow?
-
+    
     open lazy var mixins: [LifeCycle] = self.createMixins()
     open lazy var appDelegateMixins: [UIApplicationDelegateLifeCycle] = self.mixins.compactMap{ $0 as? UIApplicationDelegateLifeCycle }
-
+    
     open func createMixins() -> [LifeCycle] {
         return []
     }
-
+    
     override public init() {
         super.init()
+        initProperties()
+        initDerivedProperties()
         didInit()
     }
-
+    
+    open func initProperties(){
+        appDelegateMixins.forEach { $0.initProperties() }
+    }
+    open func initDerivedProperties(){
+        appDelegateMixins.forEach { $0.initDerivedProperties() }
+    }
     open func didInit() {
         appDelegateMixins.forEach { $0.didInit() }
     }
@@ -39,7 +47,7 @@ extension Collection {
         let dispatchGroup = DispatchGroup()
         var results: [T] = []
         var returns: [S] = []
-
+        
         for mixin in self {
             dispatchGroup.enter()
             let returned = work(mixin, { result in
@@ -52,11 +60,11 @@ extension Collection {
                 dispatchGroup.leave()
             }
         }
-
+        
         dispatchGroup.notify(queue: .main) {
             completionHandler(results)
         }
-
+        
         return returns
     }
 }

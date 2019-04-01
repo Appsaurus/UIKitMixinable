@@ -23,40 +23,45 @@ open class MixinableTableViewCell: UITableViewCell, UIViewMixinable{
     public init(callDidInit: Bool){
         super.init(style: .default, reuseIdentifier: nil)
         if callDidInit{
-            didInitProgramatically()
+            initLifecycle(.programmatically)
+            mix_superviewLifecycle()
         }
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
+        initLifecycle(.coder)
+        mix_superviewLifecycle()
     }
     
     //MARK: UITableViewCell Initializers
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String? = nil) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        didInitProgramatically()
+        initLifecycle(.programmatically)
+        mix_superviewLifecycle()
     }
-    
+
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
     open func didInit() {
         mix_didInit()
     }
-    
+
     open func didInitProgramatically() {
         mix_didInitProgramatically()
-        didInit()
-        mix_superviewLifecycle()
     }
-    
+
     open func didInitFromNib() {
         mix_didInitFromNib()
-        didInit()
     }
-    
-    public func didInitFromCoder() {
+
+    open func didInitFromCoder() {
         mix_didInitFromCoder()
-        didInit()
     }
     
     //MARK: SuperviewLifeCycle

@@ -14,6 +14,8 @@ open class InitializableMixin<Mixable>: Mixin<Mixable> & InitializableLifeCycle{
     open func didInitFromCoder() { }
     open func didInitFromNib() { }
     open func didInit() { }
+    open func initProperties() {}
+    open func initDerivedProperties() {}
     open func willDeinit() { }
 }
 
@@ -22,11 +24,35 @@ public protocol InitializableLifeCycle: LifeCycle{
     func didInitFromNib()
     func didInitProgramatically()
     func didInit()
+    func initProperties()
+    func initDerivedProperties()
     func willDeinit()
+}
+
+public enum InitializationType {
+    case coder
+    case nib
+    case programmatically
 }
 
 extension InitializableLifeCycle{
     public func willDeinit() { }
+    public func initLifecycle(_ initializationType: InitializationType = .programmatically){
+        initAllProperties()
+        switch initializationType {
+        case .nib:
+            didInitFromNib()
+        case .coder:
+            didInitFromCoder()
+        case .programmatically:
+            didInitProgramatically()
+        }
+        didInit()
+    }
+    public func initAllProperties(){
+        initProperties()
+        initDerivedProperties()
+    }
 }
 
 public protocol InitializableMixinable: Mixinable{}
@@ -51,6 +77,13 @@ extension InitializableMixinable{
     
     public func mix_didInit() {
         initMixins.forEach{$0.didInit()}
+    }
+
+    public func mix_initProperties() {
+        initMixins.forEach{$0.initProperties()}
+    }
+    public func mix_initDerivedProperties() {
+        initMixins.forEach{$0.initDerivedProperties()}
     }
     
     public func mix_willDeinit() {

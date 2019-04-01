@@ -11,6 +11,8 @@ import Intents
 
 public protocol UIApplicationDelegateLifeCycle: UIApplicationDelegate, LifeCycle{
     func didInit()
+    func initProperties()
+    func initDerivedProperties()
 }
 
 extension UIApplicationDelegateLifeCycle {
@@ -21,7 +23,8 @@ extension UIApplicationDelegateLifeCycle {
 
 open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDelegateLifeCycle{
     open func didInit() {}
-
+    open func initProperties() {}
+    open func initDerivedProperties() {}
     open func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool { return true }
     open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool { return true }
     open func applicationDidFinishLaunching(_ application: UIApplication) {}

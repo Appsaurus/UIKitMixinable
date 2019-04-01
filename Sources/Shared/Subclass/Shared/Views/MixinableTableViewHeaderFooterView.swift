@@ -23,40 +23,44 @@ open class MixinableTableViewHeaderFooterView: UITableViewHeaderFooterView, UIVi
     public init(callDidInit: Bool){
         super.init(reuseIdentifier: nil)
         if callDidInit{
-            didInitProgramatically()
+            initLifecycle(.programmatically)
+            mix_superviewLifecycle()
         }
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        didInitFromCoder()
+        initLifecycle(.coder)
     }
     
     //MARK: TableViewHeaderFooterView Initializers
     public override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        didInitProgramatically()
+        initLifecycle(.programmatically)
+        mix_superviewLifecycle()
     }
     
     //MARK: InitializableLifeCycle
+    open func initProperties() {
+        mix_initProperties()
+    }
+    open func initDerivedProperties() {
+        mix_initDerivedProperties()
+    }
     open func didInit() {
         mix_didInit()
     }
     
     open func didInitProgramatically() {
         mix_didInitProgramatically()
-        didInit()
-        mix_superviewLifecycle()
     }
     
     open func didInitFromNib() {
         mix_didInitFromNib()
-        didInit()
     }
     
     public func didInitFromCoder() {
         mix_didInitFromCoder()
-        didInit()
     }
     
     //MARK: SuperviewLifeCycle
