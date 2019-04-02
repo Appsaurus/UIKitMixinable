@@ -24,13 +24,11 @@ open class MixinableTabBarController: UITabBarController, UIViewControllerMixina
     public required init?(coder aDecoder: NSCoder) {
         initializationType = .coder
         super.init(coder: aDecoder)
-        initAllProperties()
     }
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         initializationType = .nib
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        initAllProperties()
     }
 
 
