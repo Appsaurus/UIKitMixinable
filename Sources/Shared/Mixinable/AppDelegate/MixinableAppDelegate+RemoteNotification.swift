@@ -52,18 +52,14 @@ extension MixinableAppDelegate {
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Swift.Void) {
         apply({ (mixin, completion) -> Void? in
             mixin.application?(application, handleActionWithIdentifier: identifier, for: notification, completionHandler: completion)
-        }, completionHandler: { _ in
-            completionHandler()
-        })
+        }, completionHandler: completionHandler)
     }
 
     @available(iOS, introduced: 9.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable: Any], withResponseInfo responseInfo: [AnyHashable: Any], completionHandler: @escaping () -> Swift.Void) {
         apply({ (mixin, completionHandler) -> Void? in
             mixin.application?(application, handleActionWithIdentifier: identifier, forRemoteNotification: userInfo, withResponseInfo: responseInfo, completionHandler: completionHandler)
-        }, completionHandler: { _ in
-            completionHandler()
-        })
+        }, completionHandler: completionHandler)
     }
 
     // Called when your app has been activated by the user selecting an action from a remote notification.
@@ -73,18 +69,14 @@ extension MixinableAppDelegate {
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable: Any], completionHandler: @escaping () -> Swift.Void) {
         apply({ (mixin, completionHandler) -> Void? in
             mixin.application?(application, handleActionWithIdentifier: identifier, forRemoteNotification: userInfo, completionHandler: completionHandler)
-        }, completionHandler: { _ in
-            completionHandler()
-        })
+        }, completionHandler: completionHandler)
     }
 
     @available(iOS, introduced: 9.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
     open func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, withResponseInfo responseInfo: [AnyHashable: Any], completionHandler: @escaping () -> Swift.Void) {
         apply({ (mixin, completionHandler) -> Void? in
             mixin.application?(application, handleActionWithIdentifier: identifier, for: notification, withResponseInfo: responseInfo, completionHandler: completionHandler)
-        }, completionHandler: { _ in
-            completionHandler()
-        })
+        }, completionHandler: completionHandler)
     }
 
     /*! This delegate method offers an opportunity for applications with the "remote-notification" background mode to fetch appropriate new data in response to an incoming remote notification. You should call the fetchCompletionHandler as soon as you're finished performing that operation, so the system can accurately estimate its power and data cost.

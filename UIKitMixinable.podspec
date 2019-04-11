@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   }
   s.social_media_url = 'https://twitter.com/Strobocop'
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.requires_arc = true
 
   s.ios.deployment_target = '9.0'
