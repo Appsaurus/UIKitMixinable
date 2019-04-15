@@ -37,19 +37,6 @@ public protocol UIViewControllerLifeCycle: SuperviewLifeCycle{
     func didReceiveMemoryWarning()
 }
 
-//extension UIViewControllerLifeCycle{
-//    public func loadView() { }
-//    public func loadViewIfNeeded() { }
-//    public func viewDidLoad() { }
-//    public func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
-//    public func viewWillAppear(_ animated: Bool) { }
-//    public func viewDidAppear(_ animated: Bool) { }
-//    public func viewWillDisappear(_ animated: Bool) { }
-//    public func viewDidDisappear(_ animated: Bool) { }
-//    public func viewWillLayoutSubviews() { }
-//    public func viewDidLayoutSubviews() { }
-//    public func didReceiveMemoryWarning() { }
-//}
 public protocol UIViewControllerMixinable: SuperviewMixinable{}
 
 extension UIViewControllerMixinable {
