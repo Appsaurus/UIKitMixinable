@@ -83,6 +83,8 @@ open class MixinableNavigationController: UINavigationController, UIViewControll
         super.viewDidLoad()
         mix_viewDidLoadLifecycle()
     }
+
+    open func loadAsyncData() {}
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

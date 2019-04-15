@@ -87,6 +87,8 @@ open class MixinableCollectionViewController: UICollectionViewController, UIView
         super.viewDidLoad()
         mix_viewDidLoadLifecycle()
     }
+
+    open func loadAsyncData() {}
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

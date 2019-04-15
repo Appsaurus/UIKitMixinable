@@ -80,6 +80,8 @@ open class MixinableTabBarController: UITabBarController, UIViewControllerMixina
         mix_viewDidLoadLifecycle()
     }
 
+    open func loadAsyncData() {}
+
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         mix_prepare(for: segue, sender: sender)
