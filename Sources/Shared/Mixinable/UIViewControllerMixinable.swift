@@ -11,6 +11,7 @@ open class UIViewControllerMixin<Mixable>: SuperviewMixin<Mixable> & UIViewContr
     open func loadView() { }
     open func loadViewIfNeeded() { }
     open func viewDidLoad() { }
+    open func loadAsyncData() { }
     open func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
     open func viewWillAppear(_ animated: Bool) { }
     open func viewDidAppear(_ animated: Bool) { }
@@ -25,6 +26,7 @@ public protocol UIViewControllerLifeCycle: SuperviewLifeCycle{
     func loadView()
     func loadViewIfNeeded()
     func viewDidLoad()
+    func loadAsyncData()
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     func viewWillAppear(_ animated: Bool)
     func viewDidAppear(_ animated: Bool)
@@ -50,12 +52,18 @@ public protocol UIViewControllerLifeCycle: SuperviewLifeCycle{
 //}
 public protocol UIViewControllerMixinable: SuperviewMixinable{}
 
-extension UIViewControllerMixinable{
+extension UIViewControllerMixinable {
+    public func mix_viewDidLoadLifecycle(){
+        mix_superviewLifecycle()
+        mix_viewDidLoad()
+        mix_loadAsyncData()
+    }
+}
+extension UIViewControllerMixinable {
     
     public var viewControllerMixins: [UIViewControllerLifeCycle]{
         return mixins.map{$0 as? UIViewControllerLifeCycle}.compactMap{$0}
     }
-    
     public func mix_loadView(){
         viewControllerMixins.forEach{$0.loadView()}
     }
@@ -64,6 +72,9 @@ extension UIViewControllerMixinable{
     }
     public func mix_viewDidLoad(){
         viewControllerMixins.forEach{$0.viewDidLoad()}
+    }
+    public func mix_loadAsyncData(){
+        viewControllerMixins.forEach{$0.loadAsyncData()}
     }
     public func mix_prepare(for segue: UIStoryboardSegue, sender: Any?){
         viewControllerMixins.forEach{$0.prepare(for: segue, sender: sender)}

@@ -85,8 +85,7 @@ open class MixinableCollectionViewController: UICollectionViewController, UIView
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        mix_superviewLifecycle()
-        mix_viewDidLoad()
+        mix_viewDidLoadLifecycle()
     }
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
