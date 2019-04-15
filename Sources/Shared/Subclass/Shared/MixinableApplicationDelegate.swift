@@ -39,9 +39,36 @@ open class MixinableAppDelegate: UIResponder, UIApplicationDelegate, Mixinable {
     public func apply<T, S>(_ work: (UIApplicationDelegateLifeCycle, @escaping (T) -> Void) -> S?, completionHandler: @escaping ([T]) -> Swift.Void) -> [S] {
         return appDelegateMixins.apply(work, completionHandler: completionHandler)
     }
+    @discardableResult
+    public func apply<S>(_ work: (UIApplicationDelegateLifeCycle, @escaping () -> Void) -> S?, completionHandler: @escaping () -> Swift.Void) -> [S] {
+        return appDelegateMixins.apply(work, completionHandler: completionHandler)
+    }
 }
 
 extension Collection {
+    @discardableResult
+    public func apply<S>(_ work: (Element, @escaping () -> Void) -> S?, completionHandler: @escaping () -> Swift.Void) -> [S] {
+        let dispatchGroup = DispatchGroup()
+        var returns: [S] = []
+
+        for mixin in self {
+            dispatchGroup.enter()
+            let returned = work(mixin, {
+                dispatchGroup.leave()
+            })
+            if let returned = returned {
+                returns.append(returned)
+            } else { // Method not implemented
+                dispatchGroup.leave()
+            }
+        }
+
+        dispatchGroup.notify(queue: .main) {
+            completionHandler()
+        }
+
+        return returns
+    }
     @discardableResult
     public func apply<T, S>(_ work: (Element, @escaping (T) -> Void) -> S?, completionHandler: @escaping ([T]) -> Swift.Void) -> [S] {
         let dispatchGroup = DispatchGroup()

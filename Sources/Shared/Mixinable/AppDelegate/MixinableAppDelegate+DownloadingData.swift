@@ -29,8 +29,6 @@ extension MixinableAppDelegate {
     open func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Swift.Void) {
         apply({ (mixin, completionHandler) -> Void? in
             mixin.application?(application, handleEventsForBackgroundURLSession: identifier, completionHandler: completionHandler)
-        }, completionHandler: { _ in
-            completionHandler()
-        })
+        }, completionHandler: completionHandler)
     }
 }
