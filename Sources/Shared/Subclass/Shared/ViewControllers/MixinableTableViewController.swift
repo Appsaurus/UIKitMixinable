@@ -25,26 +25,26 @@ open class MixinableTableViewController: UITableViewController, UIViewController
     public init(callDidInit: Bool){
         super.init(style: .grouped)
         if callDidInit{
-        initLifecycle(.programmatically)
+            initLifecycle(.programmatically)
         }
     }
-
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initLifecycle(.coder)
     }
-
+    
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         initLifecycle(.nib)
     }
-
+    
     //MARK: TableView Initializers
     public override init(style: UITableView.Style) {
         super.init(style: style)
         initLifecycle(.programmatically)
     }
-
+    
     //MARK: InitializableLifeCycle
     open func initProperties() {
         mix_initProperties()
@@ -55,7 +55,7 @@ open class MixinableTableViewController: UITableViewController, UIViewController
     open func didInit(type: InitializationType) {
         mix_didInit(type: type)
     }
-
+    
     deinit {
         mix_willDeinit()
     }
@@ -88,8 +88,10 @@ open class MixinableTableViewController: UITableViewController, UIViewController
         super.viewDidLoad()
         mix_viewDidLoadLifecycle()
     }
-
-    open func loadAsyncData() {}
+    
+    open func loadAsyncData() {
+        mix_loadAsyncData()
+    }
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

@@ -42,11 +42,11 @@ open class MixinableNavigationController: UINavigationController, UIViewControll
     open func initProperties() {
         mix_initProperties()
     }
-
+    
     open func initDerivedProperties() {
         mix_initDerivedProperties()
     }
-
+    
     open func didInit(type: InitializationType) {
         mix_didInit(type: type)
     }
@@ -83,8 +83,10 @@ open class MixinableNavigationController: UINavigationController, UIViewControll
         super.viewDidLoad()
         mix_viewDidLoadLifecycle()
     }
-
-    open func loadAsyncData() {}
+    
+    open func loadAsyncData() {
+        mix_loadAsyncData()
+    }
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

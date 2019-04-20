@@ -24,7 +24,7 @@ open class MixinableCollectionViewController: UICollectionViewController, UIView
     public init(callDidInit: Bool){
         super.init(nibName: nil, bundle: nil)
         if callDidInit{
-        initLifecycle(.programmatically)
+            initLifecycle(.programmatically)
         }
     }
     
@@ -87,8 +87,10 @@ open class MixinableCollectionViewController: UICollectionViewController, UIView
         super.viewDidLoad()
         mix_viewDidLoadLifecycle()
     }
-
-    open func loadAsyncData() {}
+    
+    open func loadAsyncData() {
+        mix_loadAsyncData()
+    }
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

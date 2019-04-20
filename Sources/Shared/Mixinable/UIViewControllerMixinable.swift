@@ -37,13 +37,15 @@ public protocol UIViewControllerLifeCycle: SuperviewLifeCycle{
     func didReceiveMemoryWarning()
 }
 
-public protocol UIViewControllerMixinable: SuperviewMixinable{}
+public protocol UIViewControllerMixinable: SuperviewMixinable{
+    func loadAsyncData()
+}
 
 extension UIViewControllerMixinable {
     public func mix_viewDidLoadLifecycle(){
         mix_superviewLifecycle()
         mix_viewDidLoad()
-        mix_loadAsyncData()
+        loadAsyncData()
     }
 }
 extension UIViewControllerMixinable {

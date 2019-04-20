@@ -24,7 +24,7 @@ open class MixinablePageViewController: UIPageViewController, UIViewControllerMi
     public init(callDidInit: Bool){
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         if callDidInit{
-        initLifecycle(.programmatically)
+            initLifecycle(.programmatically)
         }
     }
     
@@ -37,7 +37,7 @@ open class MixinablePageViewController: UIPageViewController, UIViewControllerMi
     public override init(transitionStyle style: UIPageViewController.TransitionStyle,
                          navigationOrientation: UIPageViewController.NavigationOrientation,
                          options: [UIPageViewController.OptionsKey : Any]? = nil) {
-//        let options = convertFromOptionalUIPageViewControllerOptionsKeyDictionary(options)
+        //        let options = convertFromOptionalUIPageViewControllerOptionsKeyDictionary(options)
         super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
         initLifecycle(.programmatically)
     }
@@ -86,7 +86,9 @@ open class MixinablePageViewController: UIPageViewController, UIViewControllerMi
         mix_viewDidLoadLifecycle()
     }
 
-    open func loadAsyncData() {}
+    open func loadAsyncData() {
+        mix_loadAsyncData()
+    }
     
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
