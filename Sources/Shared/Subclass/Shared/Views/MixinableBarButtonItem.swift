@@ -28,12 +28,6 @@ open class MixinableBarButtonItem: UIBarButtonItem, UIViewMixinable{
         }
     }
     
-    public convenience init(customView: UIView){
-        self.init(callDidInit: false)
-        self.customView = customView
-        initLifecycle(.programmatically)
-    }
-    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initLifecycle(.coder)
