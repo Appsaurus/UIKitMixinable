@@ -139,6 +139,15 @@ open class MixinableViewController: UIViewController, UIViewControllerMixinable{
         super.didReceiveMemoryWarning()
         mix_didReceiveMemoryWarning()
     }
+
+    open override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
+        mix_willMove(toParent: parent)
+    }
+    open override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
+        mix_didMove(toParent: parent)
+    }
 }
 
 

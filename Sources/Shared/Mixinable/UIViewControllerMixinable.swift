@@ -20,6 +20,8 @@ open class UIViewControllerMixin<Mixable>: SuperviewMixin<Mixable> & UIViewContr
     open func viewWillLayoutSubviews() { }
     open func viewDidLayoutSubviews() { }
     open func didReceiveMemoryWarning() { }
+    open func willMove(toParent parent: UIViewController?) {}
+    open func didMove(toParent parent: UIViewController?) {}
 }
 
 public protocol UIViewControllerLifeCycle: SuperviewLifeCycle{
@@ -35,6 +37,8 @@ public protocol UIViewControllerLifeCycle: SuperviewLifeCycle{
     func viewWillLayoutSubviews()
     func viewDidLayoutSubviews()
     func didReceiveMemoryWarning()
+    func willMove(toParent parent: UIViewController?)
+    func didMove(toParent parent: UIViewController?)
 }
 
 public protocol UIViewControllerMixinable: SuperviewMixinable{
@@ -89,7 +93,13 @@ extension UIViewControllerMixinable {
     public func mix_didReceiveMemoryWarning(){
         viewControllerMixins.forEach{$0.didReceiveMemoryWarning()}
     }
-    
+
+    public func mix_willMove(toParent parent: UIViewController?) {
+        viewControllerMixins.forEach{$0.willMove(toParent: parent)}
+    }
+    public func mix_didMove(toParent parent: UIViewController?) {
+        viewControllerMixins.forEach{$0.didMove(toParent: parent)}
+    }
 }
 
 extension Array where Element: UIViewControllerLifeCycle{
@@ -125,6 +135,13 @@ extension Array where Element: UIViewControllerLifeCycle{
     }
     public func didReceiveMemoryWarning(){
         forEach{$0.didReceiveMemoryWarning()}
+    }
+
+    public func willMove(toParent parent: UIViewController?) {
+        forEach{$0.willMove(toParent: parent)}
+    }
+    public func didMove(toParent parent: UIViewController?) {
+        forEach{$0.didMove(toParent: parent)}
     }
 }
 
