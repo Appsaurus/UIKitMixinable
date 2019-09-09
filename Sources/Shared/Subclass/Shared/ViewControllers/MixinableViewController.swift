@@ -18,12 +18,12 @@ open class MixinableViewController: UIViewController, UIViewControllerMixinable{
     
     //MARK: Initializers
     public convenience init(){
-        self.init(callDidInit: true)
+        self.init(callInitLifecycle: true)
     }
     
-    public init(callDidInit: Bool){
+    public init(callInitLifecycle: Bool){
         super.init(nibName: nil, bundle: nil)
-        if callDidInit{
+        if callInitLifecycle{
             initLifecycle(.programmatically)
         }
     }

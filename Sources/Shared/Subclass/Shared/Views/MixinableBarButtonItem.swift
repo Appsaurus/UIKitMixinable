@@ -18,12 +18,12 @@ open class MixinableBarButtonItem: UIBarButtonItem, UIViewMixinable{
     
     //MARK: Initializers
     public override convenience init(){
-        self.init(callDidInit: true)
+        self.init(callInitLifecycle: true)
     }
     
-    public init(callDidInit: Bool){
+    public init(callInitLifecycle: Bool){
         super.init()
-        if callDidInit{
+        if callInitLifecycle{
             initLifecycle(.programmatically)
         }
     }

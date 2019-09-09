@@ -22,9 +22,9 @@ open class MixinableTableViewController: UITableViewController, UIViewController
         initLifecycle(.programmatically)
     }
     
-    public init(callDidInit: Bool){
+    public init(callInitLifecycle: Bool){
         super.init(style: .grouped)
-        if callDidInit{
+        if callInitLifecycle{
             initLifecycle(.programmatically)
         }
     }

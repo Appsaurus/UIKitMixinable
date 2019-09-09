@@ -16,9 +16,9 @@ open class MixinableButton: UIButton, UIViewMixinable{
     }
     
     //MARK: Initializers
-    public init(callDidInit: Bool){
+    public init(callInitLifecycle: Bool){
         super.init(frame: .zero)
-        if callDidInit{
+        if callInitLifecycle{
             initLifecycle(.programmatically)
         }
     }

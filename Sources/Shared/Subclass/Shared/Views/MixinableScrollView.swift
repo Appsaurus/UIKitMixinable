@@ -17,12 +17,12 @@ open class MixinableScrollView: UIScrollView, UIViewMixinable{
     
     //MARK: Initializers
     public convenience init(){
-        self.init(callDidInit: true)
+        self.init(callInitLifecycle: true)
     }
     
-    public init(callDidInit: Bool){
+    public init(callInitLifecycle: Bool){
         super.init(frame: .zero)
-        if callDidInit{
+        if callInitLifecycle{
             initLifecycle(.programmatically)
         }
     }

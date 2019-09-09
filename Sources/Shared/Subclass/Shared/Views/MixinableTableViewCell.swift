@@ -17,12 +17,12 @@ open class MixinableTableViewCell: UITableViewCell, UIViewMixinable{
     
     //MARK: Initializers
     public convenience init(){
-        self.init(callDidInit: true)
+        self.init(callInitLifecycle: true)
     }
     
-    public init(callDidInit: Bool){
+    public init(callInitLifecycle: Bool){
         super.init(style: .default, reuseIdentifier: nil)
-        if callDidInit{
+        if callInitLifecycle{
             initLifecycle(.programmatically)
         }
     }
