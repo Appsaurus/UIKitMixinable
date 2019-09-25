@@ -6,8 +6,16 @@
 //
 
 import UIKit
+open class DefaultViewMixin: UIViewMixin<UIView>{
 
-open class DefaultViewMixin: UIViewMixin<UIView>{}
+    open override func initProperties() {
+        super.initProperties()
+//        mixable.layoutMargins = .zero
+//        if #available(iOS 11.0, *) {
+//            mixable.directionalLayoutMargins = .zero
+//        }
+    }
+}
 
 open class DefaultViewControllerMixin: UIViewControllerMixin<UIViewController>{
     open override func initProperties() {
