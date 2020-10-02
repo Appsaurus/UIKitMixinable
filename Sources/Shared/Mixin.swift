@@ -8,9 +8,19 @@
 import Foundation
 
 open class Mixin<Mixable>: NSObject {
-    open var mixable: Mixable
-    
+    open var mixable: Mixable? {
+        return _weakMixable as? Mixable ?? _mixable
+    }
+
+    open weak var _weakMixable: NSObject?
+    open var _mixable: Mixable?
+
     public required init(_ mixable: Mixable){
-        self.mixable = mixable
+        if let weakMixable = mixable as? NSObject {
+            _weakMixable = weakMixable
+        }
+        else {
+            _mixable = mixable
+        }
     }
 }
