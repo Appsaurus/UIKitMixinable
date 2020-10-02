@@ -7,8 +7,8 @@
 
 import Foundation
 
-open class Mixin<Mixable>: NSObject {
-    open var mixable: Mixable
+open class Mixin<Mixable>: NSObject where Mixable: NSObject {
+    open weak var mixable: Mixable?
     
     public required init(_ mixable: Mixable){
         self.mixable = mixable
