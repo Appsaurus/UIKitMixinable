@@ -7,7 +7,7 @@
 
 import Foundation
 
-open class SuperviewMixin<Mixable>: InitializableMixin<Mixable> & SuperviewLifeCycle{
+open class SuperviewMixin<Mixable>: InitializableMixin<Mixable> & SuperviewLifeCycle where Mixable: NSObject{
     open func createSubviews(){}
     open func didFinishCreatingAllViews(){}
     open func createAutoLayoutConstraints(){}

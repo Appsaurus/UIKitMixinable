@@ -9,7 +9,7 @@ import Foundation
 
 
 
-open class InitializableMixin<Mixable>: Mixin<Mixable> & InitializableLifeCycle{
+open class InitializableMixin<Mixable>: Mixin<Mixable> & InitializableLifeCycle where Mixable: NSObject{
     open func didInit(type: InitializationType) {}
     open func initProperties() {}
     open func initDerivedProperties() {}

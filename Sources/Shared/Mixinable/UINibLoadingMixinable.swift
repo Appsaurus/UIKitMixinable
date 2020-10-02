@@ -7,7 +7,7 @@
 
 import Foundation
 
-open class NibLoadingMixin<Mixable>: InitializableMixin<Mixable>{
+open class NibLoadingMixin<Mixable>: InitializableMixin<Mixable> where Mixable: NSObject{
 //    open func awakeFromNib(){}
 //    open func prepareForInterfaceBuilder(){}
 }

@@ -21,7 +21,7 @@ extension UIApplicationDelegateLifeCycle {
     }
 }
 
-open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDelegateLifeCycle{
+open class UIApplicationDelegateMixin<Mixable>: Mixin<Mixable> & UIApplicationDelegateLifeCycle where Mixable: NSObject{
     open func didInit() {}
     open func initProperties() {}
     open func initDerivedProperties() {}

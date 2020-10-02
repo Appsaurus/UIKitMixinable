@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class UIViewMixin<Mixable>: SuperviewMixin<Mixable> & UIViewLifeCycle{
+open class UIViewMixin<Mixable>: SuperviewMixin<Mixable> & UIViewLifeCycle where Mixable: NSObject{
     open func willMove(toSuperview newSuperview: UIView?){}
     open func didMoveToSuperview(){}
     open func willMove(toWindow newWindow: UIWindow?){}

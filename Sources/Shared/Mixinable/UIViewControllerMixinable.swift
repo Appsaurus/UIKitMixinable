@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class UIViewControllerMixin<Mixable>: SuperviewMixin<Mixable> & UIViewControllerLifeCycle{
+open class UIViewControllerMixin<Mixable>: SuperviewMixin<Mixable> & UIViewControllerLifeCycle where Mixable: NSObject{
     open func loadView() { }
     open func loadViewIfNeeded() { }
     open func viewDidLoad() { }

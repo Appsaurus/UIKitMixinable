@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 @available(iOS 10, *)
-open class UNUserNotificationCenterDelegateMixin<Mixable>: UIApplicationDelegateMixin<Mixable>, UNUserNotificationCenterDelegateLifeCycle{
+open class UNUserNotificationCenterDelegateMixin<Mixable>: UIApplicationDelegateMixin<Mixable>, UNUserNotificationCenterDelegateLifeCycle where Mixable: NSObject{
 
     open func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {}
 
