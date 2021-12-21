@@ -53,6 +53,10 @@ open class DefaultMixins{
         return views(view)
     }
 
+    static var label: DefaultMixinsClosure<UILabel> = { view in
+        return views(view)
+    }
+
     static public var collectionViewCell: DefaultMixinsClosure<UICollectionViewCell> = { view in
         return views(view)
     }

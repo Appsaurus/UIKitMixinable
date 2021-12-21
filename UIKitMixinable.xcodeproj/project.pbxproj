@@ -187,6 +187,10 @@
 		E453A78B21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
 		E453A78C21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
 		E453A78D21BB119B00B5F714 /* UIViewMixinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453A72921BB119B00B5F714 /* UIViewMixinable.swift */; };
+		E49BAA5B277233710033ECDA /* MixinableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BAA5A277233710033ECDA /* MixinableLabel.swift */; };
+		E49BAA5C277233710033ECDA /* MixinableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BAA5A277233710033ECDA /* MixinableLabel.swift */; };
+		E49BAA5D277233710033ECDA /* MixinableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BAA5A277233710033ECDA /* MixinableLabel.swift */; };
+		E49BAA5E277233710033ECDA /* MixinableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BAA5A277233710033ECDA /* MixinableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +290,7 @@
 		E453A79321BB11FB00B5F714 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		E453A79421BB11FB00B5F714 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
 		E453A79521BB11FB00B5F714 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		E49BAA5A277233710033ECDA /* MixinableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixinableLabel.swift; sourceTree = "<group>"; };
 		EBBB45EEAB7B3AAC20EF0B02 /* Pods_UIKitMixinable_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitMixinable_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -575,6 +580,7 @@
 				E453A71E21BB119A00B5F714 /* MixinableSearchBar.swift */,
 				E453A71F21BB119A00B5F714 /* MixinableButton.swift */,
 				E453A72021BB119A00B5F714 /* MixinableTableViewCell.swift */,
+				E49BAA5A277233710033ECDA /* MixinableLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -938,6 +944,7 @@
 				E41D6FD5224A7DCD00CA05C4 /* MixinableAppDelegate+AppInitializing.swift in Sources */,
 				E41D6FC9224A7DCD00CA05C4 /* MixinableAppDelegate+InterfaceGeometry.swift in Sources */,
 				E41D6FB1224A7DCD00CA05C4 /* UIApplicationDelegateMixinable.swift in Sources */,
+				E49BAA5D277233710033ECDA /* MixinableLabel.swift in Sources */,
 				E453A75421BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
 				E453A76421BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
 				E453A77821BB119B00B5F714 /* Mixinable.swift in Sources */,
@@ -1001,6 +1008,7 @@
 				E453A74521BB119B00B5F714 /* MixinableTextField.swift in Sources */,
 				E453A74121BB119B00B5F714 /* MixinablePageViewController.swift in Sources */,
 				E41D6FDE224A7DCD00CA05C4 /* MixinableAppDelegate+AppStateAndSystemEvents.swift in Sources */,
+				E49BAA5E277233710033ECDA /* MixinableLabel.swift in Sources */,
 				E41D6FE2224A7DCD00CA05C4 /* MixinableAppDelegate+RemoteNotification.swift in Sources */,
 				E453A77521BB119B00B5F714 /* Mixin.swift in Sources */,
 				E41D6FCE224A7DCD00CA05C4 /* MixinableAppDelegate+Continuing.swift in Sources */,
@@ -1044,6 +1052,7 @@
 				E41D6FD3224A7DCD00CA05C4 /* MixinableAppDelegate+AppInitializing.swift in Sources */,
 				E41D6FC7224A7DCD00CA05C4 /* MixinableAppDelegate+InterfaceGeometry.swift in Sources */,
 				E41D6FAF224A7DCD00CA05C4 /* UIApplicationDelegateMixinable.swift in Sources */,
+				E49BAA5B277233710033ECDA /* MixinableLabel.swift in Sources */,
 				E453A75221BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
 				E453A76221BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
 				E453A77621BB119B00B5F714 /* Mixinable.swift in Sources */,
@@ -1102,6 +1111,7 @@
 				E41D6FD4224A7DCD00CA05C4 /* MixinableAppDelegate+AppInitializing.swift in Sources */,
 				E41D6FC8224A7DCD00CA05C4 /* MixinableAppDelegate+InterfaceGeometry.swift in Sources */,
 				E41D6FB0224A7DCD00CA05C4 /* UIApplicationDelegateMixinable.swift in Sources */,
+				E49BAA5C277233710033ECDA /* MixinableLabel.swift in Sources */,
 				E453A75321BB119B00B5F714 /* MixinableBarButtonItem.swift in Sources */,
 				E453A76321BB119B00B5F714 /* MixinableSearchBar.swift in Sources */,
 				E453A77721BB119B00B5F714 /* Mixinable.swift in Sources */,
