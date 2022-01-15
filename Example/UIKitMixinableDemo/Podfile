@@ -1,9 +1,0 @@
-use_frameworks!
-
-platform :ios, '9.0'
-
-target 'UIKitMixinableDemo' do
- pod 'UIKitMixinable', path: '../../'
- pod 'DarkMagic', :git => "https://github.com/appsaurus/DarkMagic.git"
-end
-
