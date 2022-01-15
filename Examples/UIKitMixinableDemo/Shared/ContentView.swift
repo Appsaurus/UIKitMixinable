@@ -10,7 +10,7 @@ import UIKitMixinable
 
 struct ContentView: View {
     var body: some View {
-        Text(SwiftPackageClass().text)
+        Text("Hello, world")
             .padding()
     }
 }
