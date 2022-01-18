@@ -5,7 +5,7 @@
 //  Created by Brian Strobach on 12/3/18.
 //
 
-#if canImport(iOS)
+#if canImport(UIKit)
 import UIKit
 
 open class MixinableImageView: UIImageView, UIViewMixinable{
